@@ -1,2 +1,12 @@
- sudo nixos-rebuild --flake .#nixos switch
-home-manager switch --flake .#linux
+## install
+```
+sh <(curl -L https://nixos.org/nix/install)
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+```
+
+
+sudo nixos-rebuild --flake .#nixos switch  
+home-manager switch --flake .#linux  
+home-manager switch --flake .#linux  --extra-experimental-features 'nix-command flakes'
