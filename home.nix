@@ -37,6 +37,7 @@ in
     shellAliases = {
       g = "git";
       lg = "lazygit";
+      lll = "ls -lrth";
   };
 };
     
