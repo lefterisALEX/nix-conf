@@ -45,6 +45,7 @@ in
   home.packages = with pkgs; ([
     # Common packages
     hello
+    k6
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
