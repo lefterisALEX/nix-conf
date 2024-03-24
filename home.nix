@@ -19,6 +19,7 @@ in
 
   home.file = {
    ".bashrc".source = lib.mkForce ./bashrc;
+   ".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
   };
  
   programs.bash = {
@@ -38,62 +39,6 @@ in
 
   programs.fish = {
     enable = true;
-    shellAliases = {
-      g = "git";
-      lg = "lazygit";
-      lll = "ls -lrth";
-    };
-    plugins = [
-      # Enable a plugin (here grc for colorized command output) from nixpkgs
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-      # Manually packaging and enable a plugin
-      {
-        name = "z";
-        src = pkgs.fetchFromGitHub {
-          owner = "jethrokuan";
-          repo = "z";
-          rev = "e0e1b9dfdba362f8ab1ae8c1afc7ccf62b89f7eb";
-          sha256 = "0dbnir6jbwjpjalz14snzd3cgdysgcs3raznsijd6savad3qhijc";
-        };
-      }
-     { name = "tide"; src = pkgs.fishPlugins.tide; }
-     { name = "git"; src = pkgs.fishPlugins.plugin-git; }
-     { name = "fzf"; src = pkgs.fishPlugins.fzf-fish; }
-     { name = "bobthefisher"; src = pkgs.fishPlugins.bobthefisher; }
-    ];
-
-   shellAbbrs = {
-     gs = "git status -sb";
-     ga = "git add";
-     gc = "git commit";
-     gcm = "git commit -m";
-     gca = "git commit --amend";
-     gcl = "git clone";
-   };
-   functions = {
-      groot = {
-        description = "cd to the root of the current git repository";
-        body = ''
-          set -l git_repo_root_dir (git rev-parse --show-toplevel 2>/dev/null)
-          if test -n "$git_repo_root_dir"
-            cd "$git_repo_root_dir"
-            echo -e ""
-            echo -e "      \e[1m\e[38;5;112m\^V//"
-            echo -e "      \e[38;5;184m|\e[37m· ·\e[38;5;184m|      \e[94mI AM GROOT !"
-            echo -e "    \e[38;5;112m- \e[38;5;184m\ - /"
-            echo -e "     \_| |_/\e[38;5;112m¯"
-            echo -e "       \e[38;5;184m\ \\"
-            echo -e "     \e[38;5;124m__\e[38;5;184m/\e[38;5;124m_\e[38;5;184m/\e[38;5;124m__"
-            echo -e "    |_______|"
-            echo -e "     \     /"
-            echo -e "      \___/\e[39m\e[00m"
-            echo -e ""
-          else
-            echo "Not in a git repository."
-          end
-        '';
-      };
-   };
 };
     
 
