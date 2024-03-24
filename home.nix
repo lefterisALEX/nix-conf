@@ -58,6 +58,8 @@ in
       }
      { name = "tide"; src = pkgs.fishPlugins.tide; }
      { name = "git"; src = pkgs.fishPlugins.plugin-git; }
+     { name = "fzf"; src = pkgs.fishPlugins.fzf-fish; }
+     { name = "bobthefisher"; src = pkgs.fishPlugins.bobthefisher; }
     ];
 
    shellAbbrs = {
@@ -98,6 +100,9 @@ in
   home.packages = with pkgs; ([
     # Common packages
     hello
+    kubectl 
+    helm
+    grc
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
