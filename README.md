@@ -10,3 +10,16 @@ nix-shell '<home-manager>' -A install
 sudo nixos-rebuild --flake .#nixos switch  
 home-manager switch --flake .#linux  
 home-manager switch --flake .#linux  --extra-experimental-features 'nix-command flakes'
+
+## MACOS
+### install
+https://nixos.org/download/  
+```
+sh <(curl -L https://nixos.org/nix/install)
+```
+
+### Run
+```
+nix run . -- build --flake .
+nix run . -- switch --flake .
+```

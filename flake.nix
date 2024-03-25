@@ -20,6 +20,8 @@
 
 
   outputs = { self, nixpkgs, home-manager }: {
+    defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -34,6 +36,12 @@
         pkgs = import nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
+        };
+      });
+      lefteris = home-manager.lib.homeManagerConfiguration ({
+        modules = [ (import ./home.nix) ];
+        pkgs = import nixpkgs {
+          system = "x86_64-darwin";
         };
       });
     };

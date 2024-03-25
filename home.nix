@@ -19,34 +19,14 @@ in
 
   home.file = {
    ".bashrc".source = lib.mkForce ./bashrc;
-   ".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
+#   ".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
   };
  
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      g = "git";
-      lg = "lazygit";
-  };
-};
-  programs.zsh = {
-    enable = true;
-    shellAliases = {
-    g = "git";
-    lg = "lazygit";
-  };
-};
-
-  programs.fish = {
-    enable = true;
-};
-    
 
   home.packages = with pkgs; ([
     # Common packages
     hello
     kubectl 
-    helm
     grc
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
