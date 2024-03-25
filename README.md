@@ -23,3 +23,7 @@ sh <(curl -L https://nixos.org/nix/install)
 nix run . -- build --flake .
 nix run . -- switch --flake .
 ```
+
+
+sources:
+https://github.com/HariSekhon/DevOps-Bash-tools/tree/master
