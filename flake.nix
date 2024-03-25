@@ -26,20 +26,21 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./modules/system/nixos.nix
         ];
       };
     };
+
     homeConfigurations = {
       linux = home-manager.lib.homeManagerConfiguration ({
-        modules = [ (import ./home.nix) ];
+        modules = [ (import ./modules/home/home.nix) ];
         pkgs = import nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
       });
       lefteris = home-manager.lib.homeManagerConfiguration ({
-        modules = [ (import ./home.nix) ];
+        modules = [ (import ./modules/home/home.nix) ];
         pkgs = import nixpkgs {
           system = "x86_64-darwin";
         };
