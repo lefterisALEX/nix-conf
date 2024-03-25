@@ -18,7 +18,7 @@ in
   programs.home-manager.enable = true;
 
   home.file = {
-   ".bashrc".source = lib.mkForce ./bashrc;
+   ".bashrc".source = lib.mkForce ./dotfiles/bashrc;
 #   ".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
   };
  
