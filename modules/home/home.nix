@@ -29,6 +29,8 @@ in
     hello
     kubectl 
     grc
+    just
+    sslscan
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
