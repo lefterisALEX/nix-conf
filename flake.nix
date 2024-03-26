@@ -35,7 +35,7 @@
       linux = home-manager.lib.homeManagerConfiguration ({
         modules = [ 
            (import ./modules/home/home.nix)
-           (import ./modules/shell)
+          # (import ./modules/shell)
          ];
         pkgs = import nixpkgs {
           system = "x86_64-linux";
