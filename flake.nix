@@ -33,7 +33,10 @@
 
     homeConfigurations = {
       linux = home-manager.lib.homeManagerConfiguration ({
-        modules = [ (import ./modules/home/home.nix ./modules/home/shell) ];
+        modules = [ 
+           (import ./modules/home/home.nix)
+           (import ./modules/shell)
+         ];
         pkgs = import nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;

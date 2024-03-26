@@ -1,4 +1,4 @@
-{ pkgs, pkgs-zsh-fzf-tab, ... }: {
+{ pkgs, ... }: {
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -17,8 +17,6 @@
     };
 
     initExtra = ''
-      # used for homebrew
-      export XDG_DATA_DIRS=$XDG_DATA_DIRS:/opt/homebrew/share
 
       # better kubectl diff
       export KUBECTL_EXTERNAL_DIFF="dyff between --omit-header --set-exit-code"
@@ -26,8 +24,6 @@
       # used for RTL AWS login
       [ -f ~/.aws/env.sh ] && source ~/.aws/env.sh
 
-      source ${pkgs.asdf-vm}/share/asdf-vm/asdf.sh
-      eval "$(/opt/homebrew/bin/brew shellenv)"
 
       bindkey '^e' edit-command-line
       # this is backspace
@@ -131,10 +127,6 @@
       {
         name = "forgit";
         src = "${pkgs.zsh-forgit}/share/zsh/zsh-forgit";
-      }
-      {
-        name = "fzf-tab";
-        src = "${pkgs-zsh-fzf-tab.zsh-fzf-tab}/share/fzf-tab";
       }
     ];
   };
