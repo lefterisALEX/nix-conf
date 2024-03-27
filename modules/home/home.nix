@@ -20,9 +20,9 @@ in
   home.file = {
    ".bashrc".source = lib.mkForce ./dotfiles/.bashrc;
    ".bash.d".source = lib.mkForce ./dotfiles/.bash.d;
-   #".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
+   ".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
   };
-  programs.fish = import ../shell/fish.nix { pkgs = pkgs; }; 
+ # programs.fish = import ../shell/fish.nix { pkgs = pkgs; }; 
 
   home.packages = with pkgs; ([
     # Common packages
