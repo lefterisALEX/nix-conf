@@ -31,6 +31,7 @@ in
     grc
     just
     sslscan
+    k6
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
