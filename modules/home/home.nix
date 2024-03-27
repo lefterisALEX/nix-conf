@@ -23,6 +23,7 @@ in
    ".config/fish".source = lib.mkForce ./dotfiles/.config/fish;
   };
  # programs.fish = import ../shell/fish.nix { pkgs = pkgs; }; 
+  programs.fish.enable = true 
 
   home.packages = with pkgs; ([
     # Common packages
