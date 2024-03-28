@@ -29,7 +29,10 @@ in
     # Common packages
     hello
     kubectl 
+    kubie
     neovim
+    fzf
+    z-lua
     unzip
     grc
     just
