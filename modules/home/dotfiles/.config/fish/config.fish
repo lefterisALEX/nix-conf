@@ -1,13 +1,4 @@
-set -g tide_left_prompt_frame_enabled true 
-set -g tide_left_prompt_items  pwd git newline
-set -g tide_right_prompt_items status kubectl cmd_duration aws 
-set -g tide_kubectl_bg_color 326CE5
-set -g tide_kubectl_color ffff00
-set -g fish_prompt_pwd_dir_length 2 
-set -g tide_prompt_min_cols 2
-set -g tide_pwd_bg_color 20252c
-set -gx PATH $PATH $HOME/.krew/bi
- 
+fish_config theme choose "Dracula Official" 
 
 
 if status is-interactive

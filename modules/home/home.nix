@@ -29,6 +29,8 @@ in
     # Common packages
     hello
     kubectl 
+    neovim
+    unzip
     grc
     just
     sslscan
