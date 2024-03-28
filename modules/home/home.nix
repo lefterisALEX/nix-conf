@@ -15,7 +15,9 @@ in
     if isDarwin then "/Users/lefteris" else unsupported;
 
   home.stateVersion = "23.11"; # Don't change this. This will not upgrade your home-manager.
-  programs.home-manager.enable = true;
+  programs.home-manager =  {
+     enable = true;
+  }
 
   home.file = {
    ".bashrc".source = lib.mkForce ./dotfiles/.bashrc;
@@ -23,7 +25,7 @@ in
    ".config/fish-nix".source = lib.mkForce ./dotfiles/.config/fish;
   };
 
-  #programs.fish.enable = true;
+  programs.fish.enable = true;
 
   home.packages = with pkgs; ([
     # Common packages
