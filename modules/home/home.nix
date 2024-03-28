@@ -15,9 +15,9 @@ in
     if isDarwin then "/Users/lefteris" else unsupported;
 
   home.stateVersion = "23.11"; # Don't change this. This will not upgrade your home-manager.
-  programs.home-manager =  {
-     enable = true;
-  }
+#  programs.home-manager =  {
+#     enable = true;
+#  };
 
   home.file = {
    ".bashrc".source = lib.mkForce ./dotfiles/.bashrc;
@@ -30,6 +30,7 @@ in
   home.packages = with pkgs; ([
     # Common packages
     hello
+    fish
     kubectl 
     kubie
     neovim
