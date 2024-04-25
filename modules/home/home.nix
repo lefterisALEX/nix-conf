@@ -26,6 +26,10 @@ in
   };
 
   programs.fish.enable = true;
+  programs.z-lua = {
+    enable = true;
+    options = [ "once" "fzf" ];
+  };
 
   home.packages = with pkgs; ([
     # Common packages
@@ -35,7 +39,6 @@ in
     kubie
     neovim
     fzf
-    z-lua
     unzip
     grc
     just

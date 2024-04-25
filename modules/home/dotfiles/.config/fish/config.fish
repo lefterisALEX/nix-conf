@@ -29,6 +29,7 @@ if status is-interactive
      abbr --add --global k.nodes.label "kubectl get no -o json | jq '.items[].metadata.labels'"
      abbr --add --global k.namespace.list_only_ns_with_pss_label "kubectl get ns -o json | jq '[.items[].metadata.labels | select(.[\"kubernetes.io/metadata.name\"] and .[\"pod-security.kubernetes.io/enforce\"])]'"
      abbr --add --global k.namespace.list_all_ns_and_pss_label "kubectl get ns -o json | jq '[.items[].metadata.labels | { \"kubernetes.io/metadata.name\", \"pod-security.kubernetes.io/enforce\" }]'"
+     abbr --add --global k.nodes.label 'kubectl get pods -o custom-columns="NAME:.metadata.name,RunAsUser:.spec.containers[*].securityContext.runAsUser,privileged:.spec.containers[*].securityContext.privileged"'
 
 end
 

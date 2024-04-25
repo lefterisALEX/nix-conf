@@ -14,4 +14,6 @@ home-manager-linux-with-experimental:
 
 # Command to switch Home Manager configuration for MAC
 home-manager-mac:
+    rm -rf ~/.config/fish
     nix run . -- switch --flake .
+    ln -s ~/.config/fish-nix/ ~/.config/fish
