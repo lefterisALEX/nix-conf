@@ -16,4 +16,5 @@ home-manager-linux-with-experimental:
 home-manager-mac:
     rm -rf ~/.config/fish
     nix run . -- switch --flake .
+    rm -rf ~/.config/fish
     ln -s ~/.config/fish-nix/ ~/.config/fish
