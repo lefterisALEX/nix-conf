@@ -41,7 +41,6 @@ in
     fzf
     unzip
     grc
-    just
     sslscan
     k6
   ] ++ lib.optionals isLinux [
