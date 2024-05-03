@@ -6,7 +6,7 @@ let
 in
 {
   imports = [
-    ## Modularize your home.nix by moving statements into other files
+   ./zsh.nix
   ];
 
   home.username = "lefteris";
