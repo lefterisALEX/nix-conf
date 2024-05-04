@@ -10,7 +10,10 @@ home-manager-linux:
 
 # Command to switch Home Manager configuration for Linux with experimental features
 home-manager-linux-with-experimental:
+    rm -rf ~/.config/fish
     home-manager switch --flake .#linux --extra-experimental-features 'nix-command flakes'
+    rm -rf ~/.config/fish
+    ln -s ~/.config/fish-nix/ ~/.config/fish
 
 # Command to switch Home Manager configuration for MAC
 home-manager-mac:
