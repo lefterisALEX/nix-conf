@@ -7,6 +7,7 @@ in
 {
   imports = [
    ./zsh.nix
+   ./fish.nix
   ];
 
   home.username = "lefteris";
@@ -19,17 +20,7 @@ in
 #     enable = true;
 #  };
 
-  home.file = {
-   ".bashrc".source = lib.mkForce ./dotfiles/.bashrc;
-   ".bash.d".source = lib.mkForce ./dotfiles/.bash.d;
-   ".config/fish-nix".source = lib.mkForce ./dotfiles/.config/fish;
-  };
 
-  programs.fish.enable = true;
-  programs.z-lua = {
-    enable = true;
-    options = [ "once" "fzf" ];
-  };
 
 
   home.packages = with pkgs; ([
