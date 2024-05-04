@@ -1,7 +1,15 @@
-{ pkgs, ... }: {
-  programs.fish.enable = true;
-  programs.z-lua = {
+ { pkgs, ... }: { 
+  programs.fish = {
     enable = true;
-    options = [ "once" "fzf" ];
-  };
+
+    shellAliases = {
+      gogit = "cd ~/git";
+      "!!" = "eval \\$history[1]";
+      lg = "ls -lG";
+    };
+    shellAbbrs = { 
+      kt = "stern";
+    }; 
+
 };
+}
