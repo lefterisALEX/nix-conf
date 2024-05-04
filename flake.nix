@@ -2,20 +2,13 @@
 {
   description = "flake for yourHostNameGoesHere";
 
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-  inputs.nixpkgs = {
-    url = "github:nixos/nixpkgs/nixos-23.11";         ## Most stable, less downloads
-    # url = "github:nixos/nixpkgs/nixpkgs-unstable";  ## Bleeding edge packages
-    # url = "github:nixos/nixpkgs/nixos-unstable";    ## Above, but with nixos tests
-  };
-
-  inputs.home-manager = {
-    url = "github:nix-community/home-manager/release-23.11";
-
-    ## Track the master branch of Home Manager if you are not on a stable
-    ## release
-    # url = "github:nix-community/home-manager/master";
-    inputs.nixpkgs.follows = "nixpkgs";
   };
 
 
