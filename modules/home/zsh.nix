@@ -1,41 +1,21 @@
-{ pkgs, ... }: {
-  programs = {
-    zsh = {
+ { pkgs, ... }: { 
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = false;
+    oh-my-zsh = {
       enable = true;
-      shellAliases = {
-        ls = toString ls;
-        clear = toString clear;
-        cat = "${pkgs.bat}/bin/bat";
-        tree = "${pkgs.erdtree}/bin/erd";
-      };
-      defaultKeymap = "viins";
-      autocd = true;
-      initExtra = ''
-        chpwd() {
-          ${ls}
-        }
-
-        autoload -U colors
-        colors
-
-        # Turn on case-insensitive completion
-        zstyle ':completion:*' matcher-list ''' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-        setopt appendhistory
-        setopt autopushd pushdtohome # Shortcuts to make cd easier
-        setopt beep                  # Beep for me
-        setopt noflowcontrol         # Disable annoying useless flow control
-        setopt noclobber             # Keep me from overwriting files accidentally
-        unsetopt notify              # Don't print status of background jobs until a prompt is about to be printed
-
-        . ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-        [ "$(whoami)" = "root" ] || ${clear}
-      '';
+      theme = "robbyrussell";
+      plugins = [
+        "git"
+        "npm"
+        "history"
+        "node"
+        "rust"
+        "deno"
+      ];
     };
-    starship = {
-      enable = true;
-      settings.directory.truncate_to_repo = false;
-    };
+    autocd = true;
+    dotDir = ".config/zsh";
   };
 }
