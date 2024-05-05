@@ -4,6 +4,8 @@
  #   shellInit = builtins.readFile ./alias.sh;
     shellInit = 
         ''
+        set -g theme_color_scheme "catppuccin"
+        set -g theme_nerd_fonts "yes"
         ${builtins.readFile ./config.fish }
         ${builtins.readFile ./alias.fish }
         '';
