@@ -1,7 +1,9 @@
  { pkgs, ... }: { 
   programs.fish = {
     enable = true;
-    shellInit = builtins.readFile ./config.fish;
+   shellInit = builtins.readFile ./config.fish;
+       # Import aliases
+ #  imports = [ ./shell_aliases.nix ];
 
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs

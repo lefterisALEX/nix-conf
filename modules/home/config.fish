@@ -6,6 +6,8 @@
 set PAGER less
 set LESS "-R"
 
+source ./common_aliases.sh
+
 
 function awaketime -d "Display time since last waking."
     echo "Awake Since " \
