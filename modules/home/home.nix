@@ -10,6 +10,7 @@ in
    ./fish.nix
    ./vim.nix
    ./tmux.nix
+   ./k9s.nix
   ];
 
   home.username = "lefteris";
