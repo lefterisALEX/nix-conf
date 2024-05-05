@@ -1,8 +1,13 @@
  { pkgs, ... }: { 
   programs.fish = {
     enable = true;
-   shellInit = builtins.readFile ./config.fish;
-       # Import aliases
+ #   shellInit = builtins.readFile ./alias.sh;
+    shellInit = 
+        ''
+        ${builtins.readFile ./config.fish }
+        ${builtins.readFile ./alias.fish }
+        '';
+      # Import aliases
  #  imports = [ ./shell_aliases.nix ];
 
     plugins = [
