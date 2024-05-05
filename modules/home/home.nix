@@ -8,6 +8,8 @@ in
   imports = [
    ./zsh.nix
    ./fish.nix
+   ./vim.nix
+   ./tmux.nix
   ];
 
   home.username = "lefteris";
@@ -29,7 +31,7 @@ in
     fish
     kubectl 
     kubie
-    neovim
+   # neovim
     fzf
     unzip
     grc
