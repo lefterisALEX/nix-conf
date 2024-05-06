@@ -1,0 +1,19 @@
+k.instanceid () {
+	[ -z ${1+x} ] && return 1
+	kubectl get node "$1" -o json | jq -r .spec.providerID | sed 's,.*/,,'
+}
+
+k-ssm () {
+	[ -z ${1+x} ] && return 1
+	aws ssm start-session --target $(k.instanceid "$1")
+}
+
+a.des () {
+	[ -z ${1+x} ] && return 1
+	aws ec2 describe-instances --output table --instance-id $(k.instanceid "$1")
+}
+
+a.creds () {
+	[ -z ${1+x} ] && return 1
+credentials=$(aws sts assume-role --role-arn arn:aws:iam::575484182474:role/kpn-developer --role-session-name test); access_key=$(echo "$credentials" | jq -r '.Credentials.AccessKeyId'); secret_key=$(echo "$credentials" | jq -r '.Credentials.SecretAccessKey'); session_token=$(echo "$credentials" | jq -r '.Credentials.SessionToken')
+}

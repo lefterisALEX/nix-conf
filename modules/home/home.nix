@@ -22,7 +22,9 @@ in
 #  programs.home-manager =  {
 #     enable = true;
 #  };
-
+  home.file = {
+   ".functions".source = lib.mkForce ./dotfiles/.functions;
+  };
 
 
 
@@ -32,7 +34,7 @@ in
     fish
     kubectl 
     kubie
-   # neovim
+    jq
     fzf
     unzip
     grc
