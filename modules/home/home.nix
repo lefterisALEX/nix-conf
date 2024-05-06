@@ -11,6 +11,7 @@ in
    ./vim.nix
    ./tmux.nix
    ./k9s.nix
+   ./apps.nix
   ];
 
   home.username = "lefteris";
@@ -24,6 +25,9 @@ in
 #  };
   home.file = {
    ".functions".source = lib.mkForce ./dotfiles/.functions;
+   ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
+   ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
+   ".config/fish/conf.d/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/asp.fish;
   };
 
 

@@ -1,11 +1,5 @@
  { pkgs, ... }: { 
  
-  programs.exa = {
-    enable = true;
-    icons = true;
-    git = true;
-  };
-
   programs.fish = {
     enable = true;
  #   shellInit = builtins.readFile ./alias.sh;

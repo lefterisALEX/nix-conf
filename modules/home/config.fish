@@ -58,3 +58,20 @@ function c9-containers
 asp kpn-iam ;set -x credentials (aws sts assume-role --role-arn arn:aws:iam::704780718979:role/kpn-developer --role-session-name cloud-infra --duration 28800); set -x access_key (echo $credentials | jq -r '.Credentials.AccessKeyId'); set -x secret_key (echo $credentials | jq -r '.Credentials.SecretAccessKey'); set -x session_token (echo $credentials | jq -r '.Credentials.SessionToken');
 asp kpn-nonprod-techbase-containers ; aws ssm start-session --target i-0860f5365f0afe527  --document-name AWS-StartInteractiveCommand  --parameters "command='sudo -u ubuntu env AWS_ACCESS_KEY_ID=$access_key  AWS_SECRET_ACCESS_KEY=$secret_key  AWS_SESSION_TOKEN=$session_token zsh -c \"cd ~/environment/aws-eks-cluster/examples/basic/ && exec zsh\"'"
 end
+
+function bytes_to_mb_gb
+    set bytes_size $argv[1]
+
+    # Check if the argument is numeric
+    if not math $bytes_size
+        echo "Error: Please provide a numeric value in bytes."
+        return
+    end
+
+    set mb_size (math "$bytes_size / (1024^2)")
+    set gb_size (math "$bytes_size / (1024^3)")
+
+        echo "$bytes_size bytes is equal to $gb_size GB"
+        echo "$bytes_size bytes is equal to $mb_size MB"
+end
+
