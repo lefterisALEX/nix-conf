@@ -16,6 +16,7 @@
         undotree  # navigable undo
         # osyo-manga/vim-over  # highlighting during :s/blah
         rainbow  # rainbow parentheses
+        nerdtree
         # myusuf3/numbers.vim  # relative/non line number mode toggle
         molokai  # Colorscheme
         vim-airline  # Cool status bar

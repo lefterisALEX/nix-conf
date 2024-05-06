@@ -12,6 +12,7 @@ in
    ./tmux.nix
    ./k9s.nix
    ./apps.nix
+   ./nerdtree.nix
   ];
 
   home.username = "lefteris";
