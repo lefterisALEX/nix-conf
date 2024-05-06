@@ -178,6 +178,10 @@ set nocompatible        " Must be first line
 
     " NEOTERM
     nnoremap <leader>r :TREPLSendLine<cr>
+
+    "NerdTree
+    nnoremap <leader>t :NERDTreeToggle<CR>
+    nnoremap <leader>f :NERDTreeFind<CR>
 " }
 
 " Initialise Directories Function {

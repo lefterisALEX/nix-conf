@@ -17,6 +17,7 @@
         # osyo-manga/vim-over  # highlighting during :s/blah
         rainbow  # rainbow parentheses
         nerdtree
+        gruvbox
         # myusuf3/numbers.vim  # relative/non line number mode toggle
         molokai  # Colorscheme
         vim-airline  # Cool status bar
@@ -26,6 +27,8 @@
       ]);
     extraConfig = builtins.readFile ./init.vim;
     viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
   };
 
   home.packages = [ pkgs.nodejs ];   # Used by copilot
