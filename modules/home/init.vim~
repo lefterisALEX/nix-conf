@@ -181,6 +181,7 @@ set nocompatible        " Must be first line
 
     "NerdTree
     nnoremap <leader>t :NERDTreeToggle<CR>
+    #nnoremap <leader>f :NERDTreeFind<CR>
     "fzf
     nnoremap <leader>/ :FzfLua live_grep<CR>
 " }

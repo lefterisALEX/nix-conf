@@ -34,8 +34,12 @@ in
 
   home.packages = with pkgs; ([
     # Common packages
-    hello
     fish
+    btop
+    htop
+    kubectl
+    krew
+    ripgrep
     kubectl 
     kubie
     jq
