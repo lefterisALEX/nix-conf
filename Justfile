@@ -1,5 +1,11 @@
 # Justfile
 
+secrets-setup:
+    mkdir secrets
+    touch secrets/age-key.txt
+
+secrets-decrypt:
+    nix-shell -p sops age --run  "sops -d modules/home/work.nix.enc > modules/home/work.nix"
 # Command to switch system configuration for NixOS
 system-nixos:
     sudo nixos-rebuild --flake .#nixos switch

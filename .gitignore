@@ -1,3 +1,5 @@
 result
 result-*
 hardware-configuration.nix
+secrets/age-key.txt
+modules/home/work.nix

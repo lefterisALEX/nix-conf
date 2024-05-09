@@ -13,6 +13,7 @@
         set -g theme_newline_cursor yes
         ${builtins.readFile ./config.fish }
         ${builtins.readFile ./alias.fish }
+        ${builtins.readFile ./work.fish }
         '';
       # Import aliases
  #  imports = [ ./shell_aliases.nix ];
