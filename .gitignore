@@ -2,4 +2,4 @@ result
 result-*
 hardware-configuration.nix
 age.key
-modules/home/work.fish
+#modules/home/work.fish

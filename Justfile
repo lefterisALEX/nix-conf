@@ -1,7 +1,7 @@
 # Justfile
 
 secrets-decrypt:
-    nix-shell -p sops age --run  "export SOPS_AGE_KEY_FILE=./age.key && sops -d modules/home/work.fish.enc > modules/home/work.fish "
+    nix-shell -p sops age --run  "export SOPS_AGE_KEY_FILE=./age.key && sops -d modules/home/work.fish.enc > ~/work.fish"
 
 # Command to switch system configuration for NixOS
 system-nixos:
