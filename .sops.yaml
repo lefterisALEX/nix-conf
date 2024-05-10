@@ -1,0 +1,6 @@
+creation_rules:
+  # Your existing creation rules here...
+
+age:
+  recipients:
+    - path: ./age.key

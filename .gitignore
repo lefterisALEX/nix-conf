@@ -1,5 +1,5 @@
 result
 result-*
 hardware-configuration.nix
-secrets/age-key.txt
-modules/home/work.nix
+age.key
+modules/home/work.fish
