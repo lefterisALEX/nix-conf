@@ -8,15 +8,18 @@ system-nixos:
     sudo nixos-rebuild --flake .#nixos switch
 
 # Command to switch Home Manager configuration for Linux
-home-manager-linux:
+home-manager-linux-desktop:
     home-manager switch --flake .#linux
 
+home-manager-linux-server:
+    home-manager switch --flake .#server
+
 # Command to switch Home Manager configuration for Linux with experimental features
+home-manager-server-with-experimental:
+    home-manager switch --flake .#server --extra-experimental-features 'nix-command flakes' --impure
+
 home-manager-linux-with-experimental:
-    #rm -rf ~/.config/fish
     home-manager switch --flake .#linux --extra-experimental-features 'nix-command flakes' --impure
-    #rm -rf ~/.config/fish
-    #ln -s ~/.config/fish-nix/ ~/.config/fish
 
 # Command to switch Home Manager configuration for MAC
 home-manager-mac:

@@ -8,8 +8,8 @@ in
   imports = [
    ./zsh.nix
    ./fish.nix
-   ./vim.nix
-   ./tmux.nix
+   ./nvim/vim.nix
+   ./tmux/tmux.nix
    ./k9s.nix
    ./apps.nix
   ];
