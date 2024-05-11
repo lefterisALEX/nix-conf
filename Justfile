@@ -1,7 +1,7 @@
 # Justfile
 
 secrets-decrypt:
-    nix-shell -p sops age --run  "export SOPS_AGE_KEY_FILE=./age.key && sops -d modules/home/work.fish.enc > ~/work.fish"
+    nix-shell -p sops age --run  "export SOPS_AGE_KEY_FILE=./age.key && sops -d modules/home/work.fish.enc > /tmp/work.fish"
 
 # Command to switch system configuration for NixOS
 system-nixos:
@@ -14,7 +14,7 @@ home-manager-linux:
 # Command to switch Home Manager configuration for Linux with experimental features
 home-manager-linux-with-experimental:
     #rm -rf ~/.config/fish
-    home-manager switch --flake .#linux --extra-experimental-features 'nix-command flakes'
+    home-manager switch --flake .#linux --extra-experimental-features 'nix-command flakes' --impure
     #rm -rf ~/.config/fish
     #ln -s ~/.config/fish-nix/ ~/.config/fish
 

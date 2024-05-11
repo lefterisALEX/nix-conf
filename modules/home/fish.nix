@@ -13,10 +13,12 @@
         set -g theme_newline_cursor yes
         ${builtins.readFile ./config.fish }
         ${builtins.readFile ./alias.fish }
-        ${builtins.readFile ~/work.fish }
+        if test -e /Users/lefteris/work-functions;
+            source /Users/lefteris/work-functions/work.fish
+        end
         '';
       # Import aliases
- #  imports = [ ./shell_aliases.nix ];
+      #  imports = [ ./shell_aliases.nix ];
 
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
