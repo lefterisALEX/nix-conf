@@ -6,6 +6,7 @@
     shellInit = 
         ''
         set -g theme_color_scheme dracula
+        set -g theme_display_aws_vault_profile yes
         set -g theme_display_k8s_context yes
         set -g theme_display_k8s_namespace yes
         set -g theme_display_date no
