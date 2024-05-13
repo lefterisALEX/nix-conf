@@ -48,7 +48,7 @@
     shellAliases = {
       gogit = "cd ~/git";
       "!!" = "eval \\$history[1]";
-      lg = "ls -lG";
+      lg = "lazygit";
     };
     shellAbbrs = { 
       kt = "stern";

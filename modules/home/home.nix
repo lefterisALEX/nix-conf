@@ -27,6 +27,9 @@ in
    ".functions".source = lib.mkForce ./dotfiles/.functions;
    ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
    ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
+   ".config/fish/functions/aar.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aar.fish;
+   ".config/fish/functions/acp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/acp.fish;
+   ".config/fish/functions/agp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/agp.fish;
    ".config/fish/conf.d/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/asp.fish;
    ".config/fish/completions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/aws.fish;
    ".config/fish/functions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aws.fish;
