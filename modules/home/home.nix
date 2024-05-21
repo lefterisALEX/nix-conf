@@ -11,6 +11,7 @@ in
    ./nvim/vim.nix
    ./tmux/tmux.nix
    ./k9s.nix
+   ./kitty.nix
    ./apps.nix
    ./cli.nix
   ];
