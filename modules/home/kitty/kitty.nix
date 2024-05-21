@@ -6,11 +6,13 @@
           name = "DroidSansM Nerd Font";
           size = 11;
         };
-        settings = {
-          enable_audio_bell = false;
-          confirm_os_window_close = 0;
-          copy_on_select = "yes";
-        };
+        # settings = {
+        #     font_family  =    "Iosevka Nerd Font Mono";
+        #     scrollback_lines = 10000;
+        #     copy_on_select = "yes";
+
+        # };
+        extraConfig = builtins.readFile ./kitty.conf;
         shellIntegration.enableZshIntegration = true;
         # shellIntegration.mode = true;
         theme = "Rosé Pine";

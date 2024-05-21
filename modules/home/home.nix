@@ -12,7 +12,7 @@ in
    ./tmux/tmux.nix
    ./k9s.nix
    ./lazygit.nix
-   ./kitty.nix
+   ./kitty/kitty.nix
    ./apps.nix
    ./cli.nix
   ];
