@@ -5,7 +5,8 @@ secrets-decrypt:
 
 # Command to switch system configuration for NixOS
 system-nixos:
-    sudo nixos-rebuild --flake .#nixos switch
+    sudo nixos-rebuild  switch --impure
+    #sudo nixos-rebuild --flake .#nixos switch (this if you want to use the flake.nix)
 
 # Do not use
 system-mac:

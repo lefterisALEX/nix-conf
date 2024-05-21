@@ -61,8 +61,6 @@
     initialPassword = "pw123";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      tree
-      git
       k6
     ];
   };
@@ -84,6 +82,11 @@
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+  };
+    # docker
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
   };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

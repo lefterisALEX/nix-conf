@@ -4,7 +4,7 @@
         enable = true;
         font = {
           name = "DroidSansM Nerd Font";
-          size = 12;
+          size = 11;
         };
         settings = {
           enable_audio_bell = false;
