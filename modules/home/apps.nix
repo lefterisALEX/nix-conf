@@ -4,6 +4,7 @@
     enable = true;
     icons = true;
     git = true;
+    enableFishIntegration  = true;
   };
   programs.fzf = {
     enable = true;
