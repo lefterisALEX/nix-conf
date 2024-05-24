@@ -15,6 +15,7 @@ in
    ./kitty/kitty.nix
    ./apps.nix
    ./cli.nix
+   ./sway.nix
   ];
 
   home.username = "lefteris";

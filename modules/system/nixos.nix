@@ -33,6 +33,9 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
+  programs.hyprland.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
   
 
@@ -77,12 +80,36 @@
      slurp # screenshot functionality
      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
      mako # notification system developed by swaywm maintainer
+     wayland
+     vscode
+     vscode-extensions.editorconfig.editorconfig
+     vscode-extensions.ms-python.python
+     vscode-extensions.vscodevim.vim
+     #vscode-extensions.dhall.dhall-lang
+     vscode-extensions.redhat.vscode-yaml
+     vscode-extensions.hashicorp.terraform
+     vscode-extensions.github.github-vscode-theme
+     vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
+     vscode-extensions.arcticicestudio.nord-visual-studio-code
+     vscode-extensions.golang.go
    ];
   # enable sway window manager
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    extraPackages = with pkgs; [
+      swaylock
+      swayidle
+      swayr
+      wf-recorder
+      grim
+      slurp
+      dmenu
+      wofi
+    ];
   };
+
+  programs.waybar.enable = true;
     # docker
   virtualisation.docker = {
     enable = true;
