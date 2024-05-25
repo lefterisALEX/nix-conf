@@ -58,6 +58,7 @@ in
     grc
     sslscan
     k6
+    gh
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
