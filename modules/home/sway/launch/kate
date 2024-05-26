@@ -1,8 +1,8 @@
 #!/bin/bash
-# ~/bin/launch/pycharm-community
+# ~/bin/launch/kate
 
-BINARY='pycharm-community'
-FOCUS='[app_id="null"]'
+BINARY='kate'
+FOCUS='[app_id="org.kde.kate"]'
 
 focus() {
     swaymsg "$FOCUS focus" >/dev/null

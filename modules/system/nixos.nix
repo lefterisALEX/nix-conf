@@ -83,16 +83,6 @@
      mako # notification system developed by swaywm maintainer
      wayland
      vscode
-     vscode-extensions.editorconfig.editorconfig
-     vscode-extensions.ms-python.python
-     vscode-extensions.vscodevim.vim
-     #vscode-extensions.dhall.dhall-lang
-     vscode-extensions.redhat.vscode-yaml
-     vscode-extensions.hashicorp.terraform
-     vscode-extensions.github.github-vscode-theme
-     vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
-     vscode-extensions.arcticicestudio.nord-visual-studio-code
-     vscode-extensions.golang.go
    ];
   # enable sway window manager
   programs.sway = {
@@ -107,6 +97,8 @@
       slurp
       dmenu
       wofi
+      libsForQt5.kate
+      sublime
     ];
   };
 
