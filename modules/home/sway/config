@@ -135,6 +135,15 @@ output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_19
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+    # Move to the next workspace
+    bindsym $mod+$mod2+Right workspace next
+
+# Move to the previous workspace
+    bindsym $mod+$mod2+Left workspace prev
+
+# simulate alt tab
+    bindsym $mod2+Tab workspace next
 #
 # Layout stuff:
 #
