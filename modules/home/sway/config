@@ -137,10 +137,10 @@ output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_19
     # We just use 1-10 as the default.
 
     # Move to the next workspace
-    bindsym $mod+$mod2+Right workspace next
+    bindsym Ctrl+Right workspace next
 
 # Move to the previous workspace
-    bindsym $mod+$mod2+Left workspace prev
+    bindsym Ctrl+Left workspace prev
 
 # simulate alt tab
     bindsym $mod2+Tab workspace next
@@ -269,8 +269,8 @@ client.unfocused        $title_outline_unfocused $title_bg_unfocused $text_color
 client.urgent           $color_urgent            $color_urgent       $color_urgent $color_urgent         $color_urgent
 
 # Add gaps in between all application windows:
-gaps inner 8
-gaps outer 3
+#gaps inner 2
+#gaps outer 2
 
 # Configure the default border:
 default_border pixel 2
