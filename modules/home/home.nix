@@ -59,6 +59,7 @@ in
     sslscan
     k6
     gh
+    terraform-ls
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
