@@ -1,0 +1,35 @@
+#!/bin/bash
+# ~/bin/launch/slack
+
+BINARY='slack'
+FOCUS='[app_id="Slack"]'
+
+focus() {
+    swaymsg "$FOCUS focus" >/dev/null
+}
+open_or_run() {
+    if pgrep -fa "/usr/.*/$BINARY" >/dev/null; then
+        # When the application is already running in the background, starting it
+        # again will typically open the window and exit.
+        $BINARY
+    else
+        # If the application is not running, start it but do not wait for it.
+        $BINARY >/dev/null 2>/dev/null &
+    fi
+}
+focus_wait() {
+    # For applications that are slow to start, we try every 0.1s until their
+    # window is open.
+    for i in {1..30}; do
+        if focus; then
+            break
+        fi
+        sleep 0.1
+    done
+}
+
+focus || (
+    open_or_run
+    focus_wait
+)
+

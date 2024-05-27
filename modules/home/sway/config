@@ -243,11 +243,13 @@ bar {
 assign [app_id="firefox"] workspace number 1
 assign [app_id="kitty"] workspace number 2
 assign [app_id="org.kde.kate"] workspace number 3
+assign [app_id="Slack"] workspace number 4
 
 # Bind commands to quickly switch to the app
 bindsym $mod+$mod2+f exec sh ~/.config/sway/launch/firefox
 bindsym $mod+$mod2+t exec sh ~/.config/sway/launch/kitty
 bindsym $mod+$mod2+c exec sh ~/.config/sway/launch/kate
+bindsym $mod+$mod2+s exec sh ~/.config/sway/launch/slack
 include /etc/sway/config.d/*
 
 #========================#
