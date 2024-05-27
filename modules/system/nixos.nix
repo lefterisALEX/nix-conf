@@ -65,6 +65,8 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       k6
+      slack
+      vscode
     ];
   };
 
@@ -82,7 +84,6 @@
      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
      mako # notification system developed by swaywm maintainer
      wayland
-     vscode
    ];
   # enable sway window manager
   programs.sway = {
