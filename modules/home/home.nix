@@ -60,6 +60,8 @@ in
     k6
     gh
     terraform-ls
+    zoxide
+    helix
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
