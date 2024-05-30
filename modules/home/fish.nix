@@ -55,8 +55,8 @@
       kt = "stern";
       ks = "kubectl --namespace=kube-system";
       "k.events" = "kubectl get events --sort-by='.metadata.creationTimestamp'";
-      "k.nodes.gpu" = "kubectl get nodes  --selector=nvidia.com/gpu=true";
-      "k.nodes.ingress" = "kubectl get nodes  --selector=kpn.org/role=ingress";
+      "k.nodes.select.gpu" = "kubectl get nodes  --selector=nvidia.com/gpu=true";
+      "k.nodes.select.ingress" = "kubectl get nodes  --selector=kpn.org/role=ingress";
       #"k.nodes" = 'kubectl get nodes -o=custom-columns=NodeName:.metadata.name,ROLE:.metadata.labels."kpn\.org/role",EC2-type:.metadata.labels."beta\.kubernetes\.io/instance-type",Instance-type:.metadata.labels."kpn\.org/lifecycle",AZ:.metadata.labels."topology\.kubernetes\.io/zone",IP:.metadata..annotations."alpha\.kubernetes\.io/provided-node-ip",CPU:.status.capacity.cpu,Memory:.status.capacity.memory,PODS_number:.status.capacity.pods';
     }; 
 
