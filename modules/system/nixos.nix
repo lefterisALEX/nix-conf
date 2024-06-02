@@ -99,7 +99,7 @@
       dmenu
       wofi
       libsForQt5.kate
-      sublime
+      hcloud
     ];
   };
 
