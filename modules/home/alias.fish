@@ -8,3 +8,4 @@ alias gl="git log --pretty=format:'%C(yellow)%h %<(24)%C(red)%ad %<(18)%C(green)
 alias k.pf.alermanager 'kubectl -n kube-system port-forward svc/kube-prometheus-stack-alertmanager 9093:9093'
 alias k.pf.prometheus 'kubectl -n kube-system port-forward svc/kube-prometheus-stack-prometheus 9090:9090'
 alias k.pf.hubble-relay 'kubectl -n kube-system port-forward svc/hubble-relay 4245:80'
+alias z 'open -a /Applications/Zed.app -n'
