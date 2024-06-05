@@ -19,6 +19,7 @@ in
    ./alacritty.nix
    ./zoxide.nix
    #./lazyvim.nix
+   ./zellij.nix
   ];
 
   home.username = "lefteris";
