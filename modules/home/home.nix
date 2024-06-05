@@ -18,7 +18,7 @@ in
    ./sway.nix
    ./alacritty.nix
    ./zoxide.nix
-   ./lazyvim.nix
+   #./lazyvim.nix
   ];
 
   home.username = "lefteris";
@@ -50,12 +50,14 @@ in
     fish
     btop
     htop
+    zellij
     kubectl
     krew
     ripgrep
     kubectl 
     kubie
     jq
+    fd
     fzf
     unzip
     grc
