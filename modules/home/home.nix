@@ -8,7 +8,7 @@ in
   imports = [
    ./zsh.nix
    ./fish.nix
-   ./nvim/vim.nix
+   #./nvim/vim.nix
    ./tmux/tmux.nix
    ./k9s.nix
    ./lazygit.nix
@@ -18,6 +18,7 @@ in
    ./sway.nix
    ./alacritty.nix
    ./zoxide.nix
+   ./lazyvim.nix
   ];
 
   home.username = "lefteris";
