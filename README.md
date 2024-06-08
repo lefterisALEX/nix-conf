@@ -31,3 +31,10 @@ nix-shell '<home-manager>' -A install
 
 sources:
 https://github.com/HariSekhon/DevOps-Bash-tools/tree/master
+
+
+##  NixOS commands
+
+```
+systemctl list-timers
+```

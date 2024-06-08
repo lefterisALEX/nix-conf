@@ -29,9 +29,13 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
+
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-24.05";
+  services.flatpak.enable = true;
 
   programs.hyprland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -100,6 +104,7 @@
       wofi
       libsForQt5.kate
       hcloud
+      bitwarden-desktop
     ];
   };
 
@@ -159,5 +164,11 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "23.11"; # Did you read the comment?
 
+  # Automatic Garbage Collection
+  nix.gc = {
+                automatic = true;
+                dates = "weekly";
+                options = "--delete-older-than 7d";
+        };
 }
 
