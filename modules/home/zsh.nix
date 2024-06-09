@@ -2,6 +2,7 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
+    #autosuggestion = true;
     enableCompletion = false;
 
     initExtra = ''
