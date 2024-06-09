@@ -17,6 +17,7 @@ in
    ./cli.nix
    ./sway.nix
    ./alacritty.nix
+   ./navi.nix
    ./zoxide.nix
    #./lazyvim.nix
    ./zellij.nix
@@ -33,6 +34,7 @@ in
 #  };
   home.file = {
    ".functions".source = lib.mkForce ./dotfiles/.functions;
+   "cheats".source = lib.mkForce ./cheats;
    ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
    ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
    ".config/fish/functions/aar.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aar.fish;

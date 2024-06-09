@@ -31,7 +31,7 @@ nix-shell '<home-manager>' -A install
 
 sources:
 https://github.com/HariSekhon/DevOps-Bash-tools/tree/master
-
+https://search.nixos.org/packages
 
 ##  NixOS commands
 
