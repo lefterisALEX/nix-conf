@@ -19,7 +19,7 @@ in
    ./alacritty.nix
    ./navi.nix
    ./zoxide.nix
-   ./lunarvim.nix
+   #./lunarvim.nix
    #./lazyvim.nix
    ./zellij.nix
   ];
@@ -70,6 +70,7 @@ in
     gh
     terraform-ls
     helix
+    neovim
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
