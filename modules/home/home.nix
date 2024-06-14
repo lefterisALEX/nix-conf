@@ -19,6 +19,7 @@ in
    ./alacritty.nix
    ./navi.nix
    ./zoxide.nix
+   ./wezterm.nix
    #./lunarvim.nix
    #./lazyvim.nix
    ./zellij.nix
