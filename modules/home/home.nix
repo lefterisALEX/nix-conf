@@ -19,7 +19,7 @@ in
    ./alacritty.nix
    ./navi.nix
    ./zoxide.nix
-   ./wezterm.nix
+   #./wezterm.nix
    #./lunarvim.nix
    #./lazyvim.nix
    ./zellij.nix
@@ -75,6 +75,7 @@ in
     neovim
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
+    wezterm
   ]
   ++ lib.optionals isDarwin [
     # macOS packages

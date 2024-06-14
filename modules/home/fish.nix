@@ -53,6 +53,8 @@
     };
     shellAbbrs = { 
       kt = "stern";
+      vi = "nvim";
+      vim = "nvim";
       ks = "kubectl --namespace=kube-system";
       "k.events" = "kubectl get events --sort-by='.metadata.creationTimestamp'";
       "k.nodes.select.gpu" = "kubectl get nodes  --selector=nvidia.com/gpu=true";
