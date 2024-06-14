@@ -19,11 +19,8 @@ in
    ./alacritty.nix
    ./navi.nix
    ./zoxide.nix
-   #./wezterm.nix
-   #./lunarvim.nix
-   #./lazyvim.nix
    ./zellij.nix
-  ];
+   ];
 
   home.username = "lefteris";
   home.homeDirectory =
@@ -75,7 +72,7 @@ in
     neovim
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
-    wezterm
+    #wezterm
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
