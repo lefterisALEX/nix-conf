@@ -88,6 +88,7 @@
      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
      mako # notification system developed by swaywm maintainer
      wayland
+     nodejs_22
    ];
   # enable sway window manager
   programs.sway = {
