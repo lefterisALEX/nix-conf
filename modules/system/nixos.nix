@@ -89,6 +89,7 @@
      mako # notification system developed by swaywm maintainer
      wayland
      nodejs_22
+     zig
    ];
   # enable sway window manager
   programs.sway = {
