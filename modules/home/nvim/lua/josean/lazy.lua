@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "josean.plugins" }, { import = "josean.plugins.lsp" } }, {
+  lockfile = "~/lazy-lock.json",
   checker = {
     enabled = true,
     notify = false,
