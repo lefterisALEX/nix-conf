@@ -1,0 +1,4 @@
+% neovim, nvim
+
+# Multi-select files from telescope and self to quicfix list
+select with TAB and CTRL+q to select to quicfix

@@ -3,6 +3,10 @@
   programs.fish = {
     enable = true;
  #   shellInit = builtins.readFile ./alias.sh;
+    interactiveShellInit = ''
+      set fish_greeting
+      eval (zellij setup --generate-auto-start fish | string collect)
+    '';
     shellInit = 
         ''
         set -g theme_color_scheme dracula
