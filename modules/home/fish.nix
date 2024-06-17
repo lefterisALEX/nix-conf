@@ -6,6 +6,7 @@
     interactiveShellInit = ''
       set fish_greeting
       #eval (zellij setup --generate-auto-start fish | string collect)
+      starship init fish | source
     '';
     shellInit = 
         ''
@@ -39,15 +40,15 @@
 #          sha256 = "0dbnir6jbwjpjalz14snzd3cgdysgcs3raznsijd6savad3qhijc";
 #        };
 #      }
-      {
-        name = "bobthefisher";
-        src = pkgs.fetchFromGitHub {
-          owner = "Scrumplex";
-          repo = "bobthefisher";
-          rev = "f4179a14b087c7fbfc2e892da429adad40a39e44";
-          sha256 = "sha256-l1DHSZa40BX2/4GCjm5E53UOeFEnMioWbZtCW14WX6k=";
-        };
-      }
+      #{
+      #  name = "bobthefisher";
+      #  src = pkgs.fetchFromGitHub {
+      #    owner = "Scrumplex";
+      #    repo = "bobthefisher";
+      #    rev = "f4179a14b087c7fbfc2e892da429adad40a39e44";
+      #    sha256 = "sha256-l1DHSZa40BX2/4GCjm5E53UOeFEnMioWbZtCW14WX6k=";
+      #  };
+      #}
     ];
 
     shellAliases = {
