@@ -5,7 +5,7 @@
  #   shellInit = builtins.readFile ./alias.sh;
     interactiveShellInit = ''
       set fish_greeting
-      eval (zellij setup --generate-auto-start fish | string collect)
+      #eval (zellij setup --generate-auto-start fish | string collect)
     '';
     shellInit = 
         ''
