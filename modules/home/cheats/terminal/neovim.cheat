@@ -2,3 +2,8 @@
 
 # Multi-select files from telescope and self to quicfix list
 select with TAB and CTRL+q to select to quicfix
+
+# Comment lines 
+gcc >> comments a single line
+gcc2j >> comments two lines up
+
