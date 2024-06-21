@@ -7,7 +7,6 @@
       set fish_greeting
       #eval (zellij setup --generate-auto-start fish | string collect)
       starship init fish | source
-      fish
     '';
     shellInit = 
         ''
