@@ -90,6 +90,8 @@
      wayland
      nodejs_22
      zig
+     cryptomator
+     rclone
    ];
   # enable sway window manager
   programs.sway = {
