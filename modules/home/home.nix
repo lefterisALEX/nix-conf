@@ -19,7 +19,7 @@ in
    ./alacritty.nix
    ./navi.nix
    ./zoxide.nix
-   ./zellij.nix
+#   ./zellij.nix
    ];
 
   home.username = "lefteris";
@@ -35,6 +35,7 @@ in
    ".functions".source = lib.mkForce ./dotfiles/.functions;
    "cheats".source = lib.mkForce ./cheats;
    ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
+   ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
    ".config/starship.toml".source = lib.mkForce ./starship/starship.toml.v2;
    ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
    ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
