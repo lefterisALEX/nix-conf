@@ -11,6 +11,7 @@ in
    #./nvim/vim.nix
    ./tmux/tmux.nix
    ./k9s.nix
+   # ./bat.nix
    ./lazygit.nix
    ./kitty/kitty.nix
    ./apps.nix
@@ -31,23 +32,26 @@ in
 #  programs.home-manager =  {
 #     enable = true;
 #  };
+
   home.file = {
    ".functions".source = lib.mkForce ./dotfiles/.functions;
    "cheats".source = lib.mkForce ./cheats;
    ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
    ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
    ".config/starship.toml".source = lib.mkForce ./starship/starship.toml.v2;
-   ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
-   ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
-   ".config/fish/functions/aar.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aar.fish;
-   ".config/fish/functions/acp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/acp.fish;
-   ".config/fish/functions/agp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/agp.fish;
-   ".config/fish/conf.d/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/asp.fish;
-   ".config/fish/completions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/aws.fish;
-   ".config/fish/functions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aws.fish;
-   ".config/fish/conf.d/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/aws.fish;
+   ".config/fish/completions".source = lib.mkForce ./fish/completions;
+   ".config/fish/functions".source = lib.mkForce ./fish/functions;
+   ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
+   # ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
+   # ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
+   # ".config/fish/functions/aar.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aar.fish;
+   # ".config/fish/functions/acp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/acp.fish;
+   # ".config/fish/functions/agp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/agp.fish;
+   # ".config/fish/conf.d/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/asp.fish;
+   # ".config/fish/completions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/aws.fish;
+   # ".config/fish/functions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aws.fish;
+   # ".config/fish/conf.d/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/aws.fish;
   };
-
 
 
   home.packages = with pkgs; ([
@@ -74,7 +78,6 @@ in
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
     #wezterm
-    bat
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
