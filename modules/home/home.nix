@@ -70,14 +70,15 @@ in
     k6
     gh
     terraform-ls
-    helix
     neovim
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
     #wezterm
+    bat
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
+    helix
   ]);
 
   programs = {
