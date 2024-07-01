@@ -11,7 +11,7 @@ in
    #./nvim/vim.nix
    ./tmux/tmux.nix
    ./k9s.nix
-   # ./bat.nix
+    ./bat.nix
    ./lazygit.nix
    ./kitty/kitty.nix
    ./apps.nix
