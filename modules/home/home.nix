@@ -8,7 +8,6 @@ in
   imports = [
    ./zsh.nix
    ./fish.nix
-   #./nvim/vim.nix
    ./tmux/tmux.nix
    ./k9s.nix
     ./bat.nix
@@ -20,7 +19,6 @@ in
    ./alacritty.nix
    ./navi.nix
    ./zoxide.nix
-#   ./zellij.nix
    ];
 
   home.username = "lefteris";
@@ -38,7 +36,8 @@ in
    "cheats".source = lib.mkForce ./cheats;
    ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
    ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
-   ".config/starship.toml".source = lib.mkForce ./starship/starship.toml.v2;
+   ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
+   ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json; # install karabiner manually from https://karabiner-elements.pqrs.org/docs/getting-started/installation/
    ".config/fish/completions".source = lib.mkForce ./fish/completions;
    ".config/fish/functions".source = lib.mkForce ./fish/functions;
    ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
@@ -66,12 +65,14 @@ in
     kubectl 
     kubie
     jq
+    # karabiner-elements
     fd
     fzf
     unzip
     grc
     sslscan
     k6
+    jless
     gh
     terraform-ls
     neovim
