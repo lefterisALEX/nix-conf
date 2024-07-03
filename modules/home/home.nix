@@ -62,10 +62,10 @@ in
     kubectl
     krew
     ripgrep
+    yq
     kubectl 
     kubie
     jq
-    # karabiner-elements
     fd
     fzf
     unzip

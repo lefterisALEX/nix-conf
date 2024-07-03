@@ -60,7 +60,7 @@
       vi = "nvim";
       v = "nvim";
       vim = "nvim";
-      cat = "bat -p";
+      cat = "bat -pP";
       zx = "zellij kill-all-sessions && zellij delete-all-sessions";
       ks = "kubectl --namespace=kube-system";
       "k.events" = "kubectl get events --sort-by='.metadata.creationTimestamp'";
