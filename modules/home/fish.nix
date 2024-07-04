@@ -63,6 +63,7 @@
       cat = "bat -pP";
       zx = "zellij kill-all-sessions && zellij delete-all-sessions";
       ks = "kubectl --namespace=kube-system";
+      ksys = "kubie ns kube-system";
       "k.events" = "kubectl get events --sort-by='.metadata.creationTimestamp'";
       "k.nodes.select.gpu" = "kubectl get nodes  --selector=nvidia.com/gpu=true";
       "k.nodes.select.ingress" = "kubectl get nodes  --selector=kpn.org/role=ingress";

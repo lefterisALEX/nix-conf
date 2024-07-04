@@ -8,7 +8,7 @@ in
   imports = [
    ./zsh.nix
    ./fish.nix
-   ./tmux/tmux.nix
+   # ./tmux/tmux.nix
    ./k9s.nix
     ./bat.nix
    ./lazygit.nix
@@ -37,6 +37,8 @@ in
    ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
    ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
    ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
+   ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
+   ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
    ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json; # install karabiner manually from https://karabiner-elements.pqrs.org/docs/getting-started/installation/
    ".config/fish/completions".source = lib.mkForce ./fish/completions;
    ".config/fish/functions".source = lib.mkForce ./fish/functions;
@@ -56,10 +58,12 @@ in
   home.packages = with pkgs; ([
     # Common packages
     fish
+    tmux
     btop
     htop
     zellij
     kubectl
+    kubectx
     krew
     ripgrep
     yq
