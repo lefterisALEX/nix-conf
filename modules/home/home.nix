@@ -80,6 +80,7 @@ in
     gh
     terraform-ls
     neovim
+    python3
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
     #wezterm
@@ -87,6 +88,7 @@ in
   ++ lib.optionals isDarwin [
     # macOS packages
     helix
+    # skhd
   ]);
 
   programs = {

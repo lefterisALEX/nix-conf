@@ -9,8 +9,8 @@ system-nixos:
     #sudo nixos-rebuild --flake .#nixos switch (this if you want to use the flake.nix)
 
 # Do not use
-system-mac:
-    nix run . -- switch --flake .
+#system-mac:
+#    nix run . -- switch --flake .
 
 # Command to switch Home Manager configuration for Linux with experimental features
 home-manager-server:

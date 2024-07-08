@@ -580,6 +580,21 @@
                   }
                 ],
                 "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": ["left_shift", "left_option"]
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "yabai -m space --rotate 270"
+                  }
+                ],
+                "type": "basic"
               }
             ]
           }
