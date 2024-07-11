@@ -59,15 +59,16 @@ in
     # Common packages
     fish
     tmux
+    wget 
     btop
     htop
     zellij
     kubectl
+    kubernetes-helm
     kubectx
     krew
     ripgrep
     yq
-    kubectl 
     kubie
     jq
     fd
