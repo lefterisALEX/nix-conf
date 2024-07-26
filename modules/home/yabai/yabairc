@@ -1,3 +1,34 @@
+# #!/usr/bin/env sh
+#
+# # Function to enforce max 3 visible windows tiled
+# enforce_max_windows() {
+#     # Get the IDs of visible windows on the current space
+#     local visible_windows=$(yabai -m query --windows --space | jq -r '.[] | select(.["is-visible"] == true) | .id')
+#
+#     # Convert the visible windows to an array
+#     local visible_window_array=($visible_windows)
+#
+#     # Get the number of visible windows
+#     local window_count=${#visible_window_array[@]}
+#
+#     # If there are more than 3 visible windows, float the extras
+#     if [ "$window_count" -gt 3 ]; then
+#         for i in $(seq 3 $(($window_count - 1))); do
+#             yabai -m window "${visible_window_array[$i]}" --toggle float
+#         done
+#     fi
+# }
+#
+# # Hook into window created and destroyed events
+# yabai -m signal --add event=window_created action="enforce_max_windows"
+# yabai -m signal --add event=window_destroyed action="enforce_max_windows"
+#
+#
+#
+# # Apply the function on startup
+# enforce_max_windows
+#
+#
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp
 

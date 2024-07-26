@@ -38,6 +38,8 @@ in
    ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
    ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
    ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
+   ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
+   ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
    ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
    ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json; # install karabiner manually from https://karabiner-elements.pqrs.org/docs/getting-started/installation/
    ".config/fish/completions".source = lib.mkForce ./fish/completions;
@@ -69,6 +71,7 @@ in
     krew
     ripgrep
     yq
+    fx
     kubie
     jq
     fd
@@ -82,6 +85,7 @@ in
     terraform-ls
     neovim
     python3
+    crane
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
     #wezterm
