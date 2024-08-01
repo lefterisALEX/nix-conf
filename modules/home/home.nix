@@ -87,13 +87,12 @@ in
     python3
     crane
     wezterm
-    floorp
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
-    #wezterm
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
+    raycast
     helix
     # skhd
   ]);

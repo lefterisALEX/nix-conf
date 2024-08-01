@@ -50,7 +50,8 @@
       lefteris = home-manager.lib.homeManagerConfiguration ({
         modules = [ (import ./modules/home/home.nix) ];
         pkgs = import nixpkgs {
-          system = "x86_64-darwin";
+          system = "aarch64-darwin";
+          config.allowUnfree = true;
         };
       });
     };
