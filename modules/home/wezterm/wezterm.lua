@@ -55,6 +55,14 @@ config.keys = {
 }
 
 config.keys = {
+  {
+    key = "w",
+    mods = "CMD",
+    action = "DisableDefaultAssignment",
+  },
+}
+
+config.keys = {
   -- This will create a new split and run your default program inside it
   {
     key = ":",

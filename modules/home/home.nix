@@ -86,6 +86,8 @@ in
     neovim
     python3
     crane
+    wezterm
+    floorp
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
     #wezterm
