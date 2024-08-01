@@ -37,4 +37,10 @@ brew install --cask keyboard-maestro
 
 # steermouse
 brew install --cask steermouse 
+brew install --cask wezterm
+```
+
+```
+# add work functions
+git clone git@github.com:lefterisALEX/work-functions.git
 ```
