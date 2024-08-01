@@ -87,6 +87,7 @@ in
     python3
     crane
     wezterm
+    slack
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]

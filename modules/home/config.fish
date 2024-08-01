@@ -72,3 +72,4 @@ function bytes_to_mb_gb
         echo "$bytes_size bytes is equal to $gb_size GB"
         echo "$bytes_size bytes is equal to $mb_size MB"
 end
+eval "$(/opt/homebrew/bin/brew shellenv)"

@@ -1,6 +1,40 @@
 ## MAC configuration
-
 ```
-sudo defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>"
-sudo defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 "<dict><key>enabled</key><false/></dict>"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install --cask cryptomator
+brew install --cask floorp
+brew install --cask vscodium
+brew install --cask keyboard-maestro
+
+
+defaults write -g com.apple.swipescrolldirection -boolean NO
+
+# install Yabai and SKHD
+brew install koekeishiya/formulae/yabai # https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
+  brew install koekeishiya/formulae/skhd
+
+
+# Mac OS Key-Repeat 
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 2
+
+# Raycast
+Import configuration from OneDrive
+
+# hide dock
+defaults write com.apple.dock autohide-delay -flot 1 && killall Dock
+defaults write com.apple.dock autohide-delay -float 1 && killall Dock
+defaults write com.apple.dock no-bouncing -bool TRUE && killall Dock
+
+# Clock
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+```
+
+````
+# keyboard-maestro
+brew install --cask keyboard-maestro
+# Sync Macros : Open Settins >> Sync Macros >> select the sync film from OneDrive
+
+# steermouse
+brew install --cask steermouse 
 ```
