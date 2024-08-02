@@ -7,6 +7,11 @@ brew install --cask vscodium
 brew install --cask keyboard-maestro
 
 
+
+# App store
+Slack
+
+
 defaults write -g com.apple.swipescrolldirection -boolean NO
 
 # install Yabai and SKHD
@@ -43,4 +48,14 @@ brew install --cask wezterm
 ```
 # add work functions
 git clone git@github.com:lefterisALEX/work-functions.git
+
+## VPNUTil
+brew tap timac/vpnstatus
+brew install timac/vpnstatus/vpnutil
+brew install --cask timac/vpnstatus/vpnstatus
+
+# karabiner elements 
+brew install --cask karabiner-elements
+
 ```
+

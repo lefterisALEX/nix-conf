@@ -86,8 +86,6 @@ in
     neovim
     python3
     crane
-    slack
-    obsidian
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
