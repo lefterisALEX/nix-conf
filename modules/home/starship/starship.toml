@@ -9,7 +9,7 @@ truncation_symbol = "repo: "
 [kubernetes]
 symbol = "⛵ "
 style = "dimmed green"
-disabled = false
+disabled = true
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]

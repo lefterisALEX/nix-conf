@@ -86,6 +86,8 @@ in
     neovim
     python3
     crane
+    stern
+    nodejs_22
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
