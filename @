@@ -68,7 +68,6 @@ in
     kubectl
     kubernetes-helm
     kubectx
-    drawio
     krew
     ripgrep
     yq
@@ -91,7 +90,6 @@ in
     nodejs_22
     unixtools.watch
     viddy
-    devbox
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]

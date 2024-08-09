@@ -57,5 +57,20 @@ brew install --cask timac/vpnstatus/vpnstatus
 # karabiner elements 
 brew install --cask karabiner-elements
 
+## Session manager plugin for AWS
+https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-macos-overview.html
 ```
 
+
+# Dock
+```
+defaults write com.apple.dock orientation left
+defaults write com.apple.dock tilesize -int 1
+defaults write com.apple.dock magnification -boolean no
+defaults write com.apple.dock autohide -boolean yes
+defaults write com.apple.dock autohide-delay -float 1000
+killall Dock
+
+# Rest Dock
+defaults delete com.apple.dock && killall Dock
+````
