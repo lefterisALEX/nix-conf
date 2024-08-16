@@ -45,6 +45,9 @@ docker logs --tail 100 <container_id> | less
 # Print the last lines of a container's logs and following its logs
 docker logs --tail 100 <container_id> -f
 
+# delete all dangling volumes 
+docker volume rm $(docker volume ls -qf dangling=true)
+
 # Create new network
 docker network create <network_name>
 

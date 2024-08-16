@@ -37,6 +37,7 @@ in
    ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
    ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
    ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
+   ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
    ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
    ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
    ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
