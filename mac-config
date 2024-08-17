@@ -74,10 +74,15 @@ killall Dock
 # Reset Dock
 defaults delete com.apple.dock && killall Dock
 ```
+# Monitor external
+```
+brew install MonitorControl
+```
+
 
 # Aninmations
 ```
- defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 defaults write -g NSScrollAnimationEnabled -bool false
 defaults write -g NSWindowResizeTime -float 0.001
 defaults write -g QLPanelAnimationDuration -float 0
@@ -95,4 +100,3 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 ```
-`
