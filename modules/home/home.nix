@@ -17,7 +17,6 @@ in
    ./cli.nix
    ./sway.nix
    ./alacritty.nix
-   ./navi.nix
    ./zoxide.nix
    ];
 
@@ -38,6 +37,7 @@ in
    ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
    ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
    ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
+   ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
    ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
    ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
    ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
@@ -93,6 +93,7 @@ in
     unixtools.watch
     viddy
     devbox
+    nerdfonts
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
