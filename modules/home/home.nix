@@ -41,6 +41,7 @@ in
    ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
    ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
    ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
+   ".k8s_color".source = lib.mkForce ./k8s_color;
    ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
    ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json; # install karabiner manually from https://karabiner-elements.pqrs.org/docs/getting-started/installation/
    ".config/fish/completions".source = lib.mkForce ./fish/completions;
@@ -62,7 +63,7 @@ in
     # Common packages
     fish
     tmux
-    wget 
+    wget
     btop
     htop
     zellij
@@ -101,6 +102,7 @@ in
     # macOS packages
     raycast
     helix
+    navi
     iterm2
     # skhd
   ]);
