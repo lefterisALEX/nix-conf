@@ -1,5 +1,9 @@
- { pkgs, ... }: { 
- 
+{ config, pkgs, lib, ... }:
+let
+  isLinux = pkgs.stdenv.hostPlatform.isLinux;
+  isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
+in
+{
   programs.fish = {
     enable = true;
  #   shellInit = builtins.readFile ./alias.sh;
@@ -23,6 +27,12 @@
         if test -e /Users/lefteris/work-functions;
             source /Users/lefteris/work-functions/work.fish
         end
+
+        # Conditionally add Homebrew environment setup if on macOS
+        ${lib.optionalString isDarwin ''
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+        ''}
+
         '';
       # Import aliases
       #  imports = [ ./shell_aliases.nix ];
