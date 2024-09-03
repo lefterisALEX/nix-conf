@@ -94,13 +94,13 @@ in
     unixtools.watch
     viddy
     devbox
-    nerdfonts
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
     raycast
+    nerdfonts
     helix
     navi
     iterm2
