@@ -8,9 +8,8 @@ in
   imports = [
    ./zsh.nix
    ./fish.nix
-   # ./tmux/tmux.nix
    ./k9s.nix
-    ./bat.nix
+   ./bat.nix
    ./lazygit.nix
    ./kitty/kitty.nix
    ./apps.nix
@@ -30,33 +29,29 @@ in
 #     enable = true;
 #  };
 
-  home.file = {
-   ".functions".source = lib.mkForce ./dotfiles/.functions;
-   "cheats".source = lib.mkForce ./cheats;
-   ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
-   ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
-   ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
-   ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
-   ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
-   ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
-   ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
-   ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
-   ".k8s_color".source = lib.mkForce ./k8s_color;
-   ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
-   ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json; # install karabiner manually from https://karabiner-elements.pqrs.org/docs/getting-started/installation/
-   ".config/fish/completions".source = lib.mkForce ./fish/completions;
-   ".config/fish/functions".source = lib.mkForce ./fish/functions;
-   ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
-   # ".config/fish/completions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/asp.fish;
-   # ".config/fish/functions/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/asp.fish;
-   # ".config/fish/functions/aar.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aar.fish;
-   # ".config/fish/functions/acp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/acp.fish;
-   # ".config/fish/functions/agp.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/agp.fish;
-   # ".config/fish/conf.d/asp.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/asp.fish;
-   # ".config/fish/completions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/completions/aws.fish;
-   # ".config/fish/functions/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/functions/aws.fish;
-   # ".config/fish/conf.d/aws.fish".source = lib.mkForce ./dotfiles/.config/fish/conf.d/aws.fish;
-  };
+  home.file = lib.mkMerge [
+    {
+      ".functions".source = lib.mkForce ./dotfiles/.functions;
+      "cheats".source = lib.mkForce ./cheats;
+      ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
+      ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
+      ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
+      ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
+      ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
+      ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
+      ".k8s_color".source = lib.mkForce ./k8s_color;
+      ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
+      ".config/fish/completions".source = lib.mkForce ./fish/completions;
+      ".config/fish/functions".source = lib.mkForce ./fish/functions;
+      ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
+    }
+    (lib.mkIf isDarwin {
+      ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
+      ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
+      ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
+
+    })
+  ];
 
 
   home.packages = with pkgs; ([
