@@ -51,10 +51,34 @@ https://search.nixos.org/packages
 systemctl list-timers
 ```
 
-## NerdFonts (linux)
+## Manual Steps
+### Linux 
 
 ```
 nix-env -iA nixpkgs.nerdfonts
 ln -s /nix/store/*nerdfonts*/share/fonts/* ~/.local/share/fonts/
 fc-cache -fv
 ```
+
+### Macos
+#### install brew
+``` 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+#### App Store
+1. Slack
+
+#### keyboard-maestro 
+Sync Macros : Open Settins >> Sync Macros >> select the sync film from OneDrive
+
+#### add work functions
+git clone git@github.com:lefterisALEX/work-functions.git
+
+
+#### Session manager plugin for AWS
+https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-macos-overview.html
+
+
+#### How to reset Dock
+defaults delete com.apple.dock && killall Dock
+
