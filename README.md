@@ -1,7 +1,12 @@
 ## install NIX (On Non NixOS)
 
+https://nixos.org/download/#nix-install-linux
+
 ```
+# MacOS
 sh <(curl -L https://nixos.org/nix/install)
+# Linux
+sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
 ## Prerequired
@@ -10,7 +15,8 @@ sh <(curl -L https://nixos.org/nix/install)
 # On NixOS:
 nix-env -iA nixos.git nixos.j
 # On Non NixOS:
-nix-env -iA nixpkgs.git nix-env -iA nixpkgs.just
+nix-env -iA nixpkgs.git
+nix-env -iA nixpkgs.just
 ```
 
 On nixOS only edit the `/etc/nixos/configuration.nix` and in imports section include the path to `nixos.nix`  
@@ -34,7 +40,9 @@ nix-shell '<home-manager>' -A install
 ```
 
 sources:
-https://home-manager-options.extranix.com/
+
+https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone  
+https://home-manager-options.extranix.com/  
 https://search.nixos.org/packages
 
 ## NixOS commands

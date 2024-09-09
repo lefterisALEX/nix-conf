@@ -89,6 +89,7 @@ in
     unixtools.watch
     viddy
     devbox
+    hcloud
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
