@@ -80,5 +80,6 @@ https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-maco
 
 
 #### How to reset Dock
+```
 defaults delete com.apple.dock && killall Dock
-
+```
