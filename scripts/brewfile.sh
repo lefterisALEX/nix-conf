@@ -18,6 +18,7 @@ brew install --cask vscodium
 brew install --cask steermouse 
 brew install --cask wezterm
 brew install --cask timac/vpnstatus/vpnstatus
+brew install --cask hiddenbar
 
 # karabiner elements 
 brew install --cask karabiner-elements
