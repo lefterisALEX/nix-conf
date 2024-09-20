@@ -4,8 +4,9 @@ alt + cmd - k : open -a /Applications/kitty.app
 alt + cmd - t : open -a /Applications/Wezterm.app
 alt + cmd - f : open -a /Applications/Floorp.app
 alt + cmd - n : open -a /Applications/Obsidian.app
-alt + cmd - v : open -a /Applications/Visual\ Studio\ Code.app
+alt + cmd - v : open -a /Applications/VSCodium.app
+alt + cmd - z : open -a /Applications/Zed.app
+alt + cmd - c : open -a calendar
 
 #Lock the screen
 cmd - l : skhd --key "cmd + ctrl - q"
-
