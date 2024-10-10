@@ -100,6 +100,9 @@ in
     helix
     navi
     iterm2
+    pluto
+    graphviz-nox
+    graphviz
     # skhd
   ]);
 
