@@ -95,14 +95,12 @@ in
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
-    raycast
+    #raycast
     nerdfonts
     helix
     navi
     iterm2
     pluto
-    graphviz-nox
-    graphviz
     # skhd
   ]);
 
