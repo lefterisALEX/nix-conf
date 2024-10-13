@@ -9,6 +9,8 @@ sh <(curl -L https://nixos.org/nix/install)
 sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
+or use https://github.com/DeterminateSystems/nix-installer
+
 ## Prerequired
 
 ```
@@ -44,6 +46,7 @@ sources:
 https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone  
 https://home-manager-options.extranix.com/  
 https://search.nixos.org/packages
+Uninstall Nix >> https://nix.dev/manual/nix/2.18/installation/uninstall
 
 ## NixOS commands
 
@@ -52,7 +55,8 @@ systemctl list-timers
 ```
 
 ## Manual Steps
-### Linux 
+
+### Linux
 
 ```
 nix-env -iA nixpkgs.nerdfonts
@@ -61,25 +65,31 @@ fc-cache -fv
 ```
 
 ### Macos
+
 #### install brew
-``` 
+
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 #### App Store
+
 1. Slack
 
-#### keyboard-maestro 
+#### keyboard-maestro
+
 Sync Macros : Open Settins >> Sync Macros >> select the sync film from OneDrive
 
 #### add work functions
+
 git clone git@github.com:lefterisALEX/work-functions.git
 
-
 #### Session manager plugin for AWS
+
 https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-macos-overview.html
 
-
 #### How to reset Dock
+
 ```
 defaults delete com.apple.dock && killall Dock
 ```
