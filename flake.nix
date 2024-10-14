@@ -27,7 +27,7 @@
     homeConfigurations = {
       linux = home-manager.lib.homeManagerConfiguration ({
         modules = [ 
-           (import ./modules/home/home.nix)
+           (import ./modules/home/default.nix)
          ];
 
         pkgs = import nixpkgs {
@@ -38,17 +38,18 @@
 
       server = home-manager.lib.homeManagerConfiguration ({
         modules = [ 
-           (import ./modules/home/home.nix)
+           (import ./modules/home/default.nix)
+           (import ./modules/home/remote-dev.nix)
          ];
 
         pkgs = import nixpkgs {
-          system = "x86_64-linux";
+          system = "aarch64-linux";
           config.allowUnfree = true;
         };
       });
 
       lefteris = home-manager.lib.homeManagerConfiguration ({
-        modules = [ (import ./modules/home/home.nix) ];
+        modules = [ (import ./modules/home/default.nix) ];
         pkgs = import nixpkgs {
           system = "aarch64-darwin";
           config.allowUnfree = true;
