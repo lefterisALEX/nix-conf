@@ -35,7 +35,6 @@ in
       "cheats".source = lib.mkForce ./cheats;
       ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
       ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
-      ".config/starship.toml".source = lib.mkForce ./starship/starship.toml;
       ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
       ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
       ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
