@@ -25,6 +25,8 @@ in
     ginkgo
     awscli2
     fzf
+    gnumake
+    gcc
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
