@@ -27,7 +27,7 @@ in
     fzf
     gnumake
     gcc
-    terraform
+    tenv
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
