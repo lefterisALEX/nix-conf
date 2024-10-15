@@ -15,6 +15,7 @@ in
 
   home.file = lib.mkMerge [
     {
+      ".work-functions".source = lib.mkForce ./work-functions;
     }
     (lib.mkIf isDarwin {
     })
