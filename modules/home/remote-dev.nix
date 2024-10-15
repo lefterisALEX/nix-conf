@@ -28,6 +28,7 @@ in
     gnumake
     gcc
     tenv
+    go
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
