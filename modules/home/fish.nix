@@ -28,7 +28,7 @@ in
             source /Users/lefteris/work-functions/work.fish
         end
         if test -e /home/lefteris/work-functions;
-            source /home/lefteris/work-functions/work.fish
+            source /home/lefteris/work-functions/tcl.fun
         end
 
         # Conditionally add Homebrew environment setup if on macOS
