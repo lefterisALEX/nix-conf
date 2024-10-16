@@ -88,6 +88,7 @@ in
     unixtools.watch
     viddy
     devbox
+    helix
     hcloud
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
@@ -96,7 +97,6 @@ in
     # macOS packages
     #raycast
     nerdfonts
-    helix
     navi
     iterm2
     pluto
