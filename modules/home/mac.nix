@@ -22,7 +22,7 @@ in
   home.file = lib.mkMerge [
     {
 
-    })
+    }
   ];
 
 

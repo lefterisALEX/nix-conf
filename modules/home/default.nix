@@ -10,7 +10,6 @@ in
    ./fish.nix
    ./k9s.nix
    ./bat.nix
-   ./lazygit.nix
    ./kitty/kitty.nix
    ./apps.nix
    ./cli.nix
