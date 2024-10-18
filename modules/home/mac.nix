@@ -6,7 +6,6 @@ let
 in
 {
   imports = [
-   ./lazygit.nix
    ];
 
   home.username = "lefteris";
