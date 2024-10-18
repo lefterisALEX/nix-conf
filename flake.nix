@@ -53,6 +53,7 @@
       lefteris = home-manager.lib.homeManagerConfiguration ({
         modules = [ 
         (import ./modules/home/default.nix)
+        (import ./modules/home/mac.nix)
         (import ./modules/home/starship.nix)
         ];
         pkgs = import nixpkgs {
