@@ -10,6 +10,7 @@ in
     interactiveShellInit = ''
       set fish_greeting
       #eval (zellij setup --generate-auto-start fish | string collect)
+      direnv hook fish | source
       starship init fish | source
     '';
     shellInit = 
@@ -21,6 +22,7 @@ in
         set -g theme_display_date no
         set -g theme_nerd_fonts "yes"
         set -g theme_newline_cursor yes
+        set -g direnv_fish_mode disable_arrow
         set -gx PATH /Users/lefteris/.nix-profile/bin $PATH
         ${builtins.readFile ./config.fish }
         ${builtins.readFile ./alias.fish }
@@ -81,7 +83,6 @@ in
       "k.events" = "kubectl get events --sort-by='.metadata.creationTimestamp'";
       "k.nodes.select.gpu" = "kubectl get nodes  --selector=nvidia.com/gpu=true";
       "k.nodes.select.ingress" = "kubectl get nodes  --selector=kpn.org/role=ingress";
-      #"k.nodes" = 'kubectl get nodes -o=custom-columns=NodeName:.metadata.name,ROLE:.metadata.labels."kpn\.org/role",EC2-type:.metadata.labels."beta\.kubernetes\.io/instance-type",Instance-type:.metadata.labels."kpn\.org/lifecycle",AZ:.metadata.labels."topology\.kubernetes\.io/zone",IP:.metadata..annotations."alpha\.kubernetes\.io/provided-node-ip",CPU:.status.capacity.cpu,Memory:.status.capacity.memory,PODS_number:.status.capacity.pods';
     }; 
   };
 }

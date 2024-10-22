@@ -11,7 +11,7 @@ in
    ./k9s.nix
    ./bat.nix
    ./lazygit.nix
-   ./kitty/kitty.nix
+   # ./kitty/kitty.nix
    ./apps.nix
    ./cli.nix
    ./sway.nix
@@ -46,6 +46,7 @@ in
     }
     (lib.mkIf isDarwin {
       ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
+      ".config/kitty/kitty.conf".source = lib.mkForce ./kitty/kitty.conf;
       ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
       ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
 
@@ -90,6 +91,8 @@ in
     devbox
     helix
     hcloud
+    direnv
+    just
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
@@ -100,6 +103,8 @@ in
     navi
     iterm2
     pluto
+    aws-vault
+    # kitty
     # skhd
   ]);
 
