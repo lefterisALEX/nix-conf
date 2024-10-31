@@ -35,40 +35,40 @@ config.enable_tab_bar = false
 config.audible_bell = "Disabled"
 config.scrollback_lines = 10000
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.95
+config.window_background_opacity = 1
 config.macos_window_background_blur = 8
 config.keys = {
-  -- This will create a new split and run your default program inside it
-  {
-    key = '"',
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-  },
+	-- This will create a new split and run your default program inside it
+	{
+		key = '"',
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
 }
 
 config.keys = {
-  {
-    key = "n",
-    mods = "SHIFT|CTRL",
-    action = wezterm.action.ToggleFullScreen,
-  },
+	{
+		key = "n",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ToggleFullScreen,
+	},
 }
 
 config.keys = {
-  {
-    key = "w",
-    mods = "CMD",
-    action = "DisableDefaultAssignment",
-  },
+	{
+		key = "w",
+		mods = "CMD",
+		action = "DisableDefaultAssignment",
+	},
 }
 
 config.keys = {
-  -- This will create a new split and run your default program inside it
-  {
-    key = ":",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-  },
+	-- This will create a new split and run your default program inside it
+	{
+		key = ":",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
 }
 config.color_scheme = "Catppuccin Mocha"
 -- and finally, return the configuration to wezterm
