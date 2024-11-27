@@ -9,7 +9,40 @@ truncation_symbol = "repo: "
 [kubernetes]
 symbol = "⛵ "
 style = "dimmed green"
-disabled = true
+disabled = false
+# detect_files = ['.yaml']
+
+[[kubernetes.contexts]]
+context_pattern = "tcloud-dev1"
+style = "yellow bold"
+context_alias = "tloud-dev1"
+[[kubernetes.contexts]]
+context_pattern = "tcloud-de-dev1"
+style = "yellow bold"
+context_alias = "tloud-de-dev1"
+[[kubernetes.contexts]]
+context_pattern = "tcloud-itv-dev1"
+style = "yellow bold"
+context_alias = "tloud-itv-dev1"
+[[kubernetes.contexts]]
+context_pattern = "tcloud-acc1"
+style = "blue bold"
+context_alias = "tloud-acc1"
+[[kubernetes.contexts]]
+context_pattern = "tcloud-de-acc1"
+style = "blue bold"
+context_alias = "tloud-de-acc1"
+[[kubernetes.contexts]]
+context_pattern = "tcloud-itv-acc1"
+style = "blue bold"
+symbol = "🛑 "
+context_alias = "tloud-itv-acc1"
+
+[[kubernetes.contexts]]
+context_pattern = ".*575484182474.*"
+style = "green"
+symbol = "✅ "
+context_alias = "local-cluster"
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
@@ -23,30 +56,28 @@ deleted = "x"
 [cmd_duration]
 min_time = 1
 format = "took [$duration]($style)"
-disabled = false
+disabled = true
 
 
 ## SECOND LINE/ROW: Prompt
 # Somethere at the beginning
 [battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
 disabled = true
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
-threshold = 15
-style = "bold red"
+[os]
 disabled = true
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
-threshold = 50
-style = "bold yellow"
+[hostname]
+ssh_only = false
 disabled = true
+format = "on [$hostname](bold yellow) "
 
-[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
-threshold = 80
-style = "bold green"
+# Shows the username
+[username]
+style_user = "white"
+style_root = "white"
+format = "[$user]($style) "
+show_always = false
 disabled = true
 
 # Prompt: optional param 1
@@ -70,9 +101,17 @@ disabled = false
 
 [aws]
 symbol = "  "
+format = 'on [$symbol($profile)]($style)'
+style = 'green'
+[aws.region_aliases]
+# eu-west-1 = 'irl'
+[aws.profile_aliases]
+kpn-nonprod-infrastructure-testing = 'infra-test'
+
 
 [conda]
 symbol = " "
+disabled = true
 
 [dart]
 symbol = " "
@@ -161,4 +200,9 @@ symbol = "ﯣ "
 format = "via [ Node.js $version](bold green) "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]
+disabled = true
+
+[terraform]
+format = '[🏎💨 $workspace]($style) '
+disabled = true
 

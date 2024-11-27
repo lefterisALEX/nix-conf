@@ -28,8 +28,9 @@ in
     fzf
     gnumake
     gcc
-    tenv
+    # tenv
     go
+    shellcheck
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]

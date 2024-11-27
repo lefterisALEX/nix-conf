@@ -63,7 +63,8 @@ in
     htop
     zellij
     kubectl
-    kubernetes-helm
+    yamllint
+    # kubernetes-helm
     kubectx
     drawio
     krew
@@ -92,7 +93,8 @@ in
     helix
     hcloud
     direnv
-    just
+    ginkgo
+    go
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
