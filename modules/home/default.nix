@@ -86,7 +86,6 @@ in
     python3
     crane
     stern
-    nodejs_22
     unixtools.watch
     viddy
     devbox
