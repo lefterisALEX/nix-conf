@@ -92,6 +92,8 @@ in
     helix
     hcloud
     direnv
+    nushell
+    tflint
     ginkgo
     go
   ] ++ lib.optionals isLinux [
