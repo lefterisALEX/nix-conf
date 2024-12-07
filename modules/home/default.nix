@@ -45,7 +45,7 @@ in
       ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
     }
     (lib.mkIf isDarwin {
-      ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
+      # ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
       ".config/kitty/kitty.conf".source = lib.mkForce ./kitty/kitty.conf;
       ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
       ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
