@@ -96,6 +96,7 @@ in
     tflint
     ginkgo
     go
+    yazi
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
