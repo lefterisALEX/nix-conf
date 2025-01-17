@@ -12,7 +12,7 @@ in
    ./bat.nix
    ./direnv.nix
    ./lazygit.nix
-   ./kitty/kitty.nix
+   #./kitty/kitty.nix
    ./apps.nix
    ./cli.nix
    ./sway.nix
