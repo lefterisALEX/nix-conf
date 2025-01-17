@@ -7,6 +7,10 @@
     historyLimit = 10000;
     keyMode = "vi";
     terminal = "screen-256color";
+    plugins = with pkgs.tmuxPlugins; [
+      fingers
+      vim-tmux-navigator
+    ];
     extraConfig = lib.strings.fileContents ./tmux.conf;
   };
 }

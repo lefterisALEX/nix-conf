@@ -10,13 +10,15 @@ in
    ./fish.nix
    ./k9s.nix
    ./bat.nix
+   ./direnv.nix
    ./lazygit.nix
-   # ./kitty/kitty.nix
+   ./kitty/kitty.nix
    ./apps.nix
    ./cli.nix
    ./sway.nix
    ./alacritty.nix
    ./zoxide.nix
+   # ./tmux/tmux.nix
    ];
 
   home.username = "lefteris";
@@ -97,6 +99,7 @@ in
     ginkgo
     go
     yazi
+    age
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]

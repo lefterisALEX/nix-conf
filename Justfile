@@ -23,3 +23,5 @@ home-manager-linux:
 home-manager-mac:
     home-manager switch --flake .#lefteris --extra-experimental-features 'nix-command flakes' --impure
 
+brew:
+    sh ./scripts/brewfile.sh
