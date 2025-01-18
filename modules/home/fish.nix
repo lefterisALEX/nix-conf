@@ -23,6 +23,7 @@ in
         set -g theme_nerd_fonts "yes"
         set -g theme_newline_cursor yes
         set -g direnv_fish_mode disable_arrow
+        set -Ux EDITOR nvim
         set -gx PATH /Users/lefteris/.nix-profile/bin $PATH
         ${builtins.readFile ./config.fish }
         ${builtins.readFile ./alias.fish }
