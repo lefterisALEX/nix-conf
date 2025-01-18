@@ -10,6 +10,9 @@
     plugins = with pkgs.tmuxPlugins; [
       fingers
       vim-tmux-navigator
+      tmux-thumbs
+      yank
+      tmux-fzf
     ];
     extraConfig = lib.strings.fileContents ./tmux.conf;
   };

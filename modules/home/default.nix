@@ -37,9 +37,9 @@ in
       "cheats".source = lib.mkForce ./cheats;
       ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
       ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
-      ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
-      ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
-      ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
+      # ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
+      # ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
+      # ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
       ".k8s_color".source = lib.mkForce ./k8s_color;
       ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
       ".config/fish/completions".source = lib.mkForce ./fish/completions;
@@ -49,8 +49,8 @@ in
     (lib.mkIf isDarwin {
       # ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
       ".config/kitty/kitty.conf".source = lib.mkForce ./kitty/kitty.conf;
-      ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
-      ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
+      # ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
+      # ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
 
     })
   ];
@@ -66,6 +66,7 @@ in
     zellij
     kubectl
     yamllint
+    chezmoi
     # kubernetes-helm
     kubectx
     drawio
