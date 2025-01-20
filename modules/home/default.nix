@@ -7,6 +7,7 @@ in
 {
   imports = [
    ./fish.nix
+   ./zoxide.nix
    ];
 
   home.username = "lefteris";
@@ -40,7 +41,6 @@ in
     fzf
     starship
     direnv
-    zoxide
     tmux
     wget
     btop
