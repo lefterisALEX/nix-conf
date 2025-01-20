@@ -1,3 +1,0 @@
-% containerd 
-# Pull an image using ctr 
-ctr image pull <image-url>
