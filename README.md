@@ -1,3 +1,11 @@
+## Manage package installation with Nix
+
+Tested for MacOS, Ubuntu and NixOS.  
+
+Note: dotfiles management can be done as well,  but i manage them with chezmoi (at least at the moment).  
+
+dotfiles: https://github.com/lefterisALEX/dotfiles
+
 ## install NIX (On Non NixOS)
 
 https://nixos.org/download/#nix-install-linux
