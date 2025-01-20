@@ -6,19 +6,7 @@ let
 in
 {
   imports = [
-   # ./zsh.nix
    ./fish.nix
-   #./k9s.nix
-   # ./bat.nix
-   # ./direnv.nix
-   # ./lazygit.nix
-   #./kitty/kitty.nix
-   # ./apps.nix
-   # ./cli.nix
-   #./sway.nix
-   #./alacritty.nix
-   # ./zoxide.nix
-   # ./tmux/tmux.nix
    ];
 
   home.username = "lefteris";
@@ -33,24 +21,12 @@ in
 
   home.file = lib.mkMerge [
     {
-      #".functions".source = lib.mkForce ./dotfiles/.functions;
-      #"cheats".source = lib.mkForce ./cheats;
-      # ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
-      # ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
-      # ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
-      # ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
-      # ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
-      #".k8s_color".source = lib.mkForce ./k8s_color;
-      #".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
       ".config/fish/completions".source = lib.mkForce ./fish/completions;
       ".config/fish/functions".source = lib.mkForce ./fish/functions;
       ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
     }
     (lib.mkIf isDarwin {
       # ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
-      #".config/kitty/kitty.conf".source = lib.mkForce ./kitty/kitty.conf;
-      # ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
-      # ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
 
     })
   ];
@@ -75,7 +51,6 @@ in
     yamllint
     lazygit
     chezmoi
-    # kubernetes-helm
     kubectx
     drawio
     krew
@@ -114,14 +89,11 @@ in
   ]
   ++ lib.optionals isDarwin [
     # macOS packages
-    #raycast
     nerdfonts
     navi
     iterm2
     pluto
     aws-vault
-    # kitty
-    # skhd
   ]);
 
   programs = {
