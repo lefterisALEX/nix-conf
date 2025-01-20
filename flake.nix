@@ -1,6 +1,6 @@
 # /etc/nixos/flake.nix
 {
-  description = "flake for yourHostNameGoesHere";
+  description = "flake for package management - dotfiles managed by chezmoi independently";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
