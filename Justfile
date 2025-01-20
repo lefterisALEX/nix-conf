@@ -1,16 +1,8 @@
 # Justfile
 
-secrets-decrypt:
-    nix-shell -p sops age --run  "export SOPS_AGE_KEY_FILE=./age.key && sops -d modules/home/work.fish.enc > /tmp/work.fish"
-
 # Command to switch system configuration for NixOS
 system-nixos:
     sudo nixos-rebuild  switch --impure
-    #sudo nixos-rebuild --flake .#nixos switch (this if you want to use the flake.nix)
-
-# Do not use
-#system-mac:
-#    nix run . -- switch --flake .
 
 # Command to switch Home Manager configuration for Linux with experimental features
 home-manager-server:
@@ -22,6 +14,3 @@ home-manager-linux:
 # Command to switch Home Manager configuration for MAC
 home-manager-mac:
     home-manager switch --flake .#lefteris --extra-experimental-features 'nix-command flakes' --impure
-
-brew:
-    sh ./scripts/brewfile.sh
