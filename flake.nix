@@ -28,7 +28,7 @@
       linux = home-manager.lib.homeManagerConfiguration ({
         modules = [ 
            (import ./modules/home/default.nix)
-           (import ./modules/home/starship.nix)
+           # (import ./modules/home/starship.nix)
          ];
 
         pkgs = import nixpkgs {
@@ -41,7 +41,7 @@
         modules = [ 
            (import ./modules/home/default.nix)
            (import ./modules/home/remote-dev.nix)
-           (import ./modules/home/starship-linux.nix)
+           # (import ./modules/home/starship-linux.nix)
          ];
 
         pkgs = import nixpkgs {
@@ -54,7 +54,7 @@
         modules = [ 
         (import ./modules/home/default.nix)
         (import ./modules/home/mac.nix)
-        (import ./modules/home/starship.nix)
+        # (import ./modules/home/starship.nix)
         ];
         pkgs = import nixpkgs {
           system = "aarch64-darwin";

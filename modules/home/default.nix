@@ -6,18 +6,18 @@ let
 in
 {
   imports = [
-   ./zsh.nix
+   # ./zsh.nix
    ./fish.nix
-   ./k9s.nix
-   ./bat.nix
-   ./direnv.nix
-   ./lazygit.nix
+   #./k9s.nix
+   # ./bat.nix
+   # ./direnv.nix
+   # ./lazygit.nix
    #./kitty/kitty.nix
-   ./apps.nix
-   ./cli.nix
-   ./sway.nix
-   ./alacritty.nix
-   ./zoxide.nix
+   # ./apps.nix
+   # ./cli.nix
+   #./sway.nix
+   #./alacritty.nix
+   # ./zoxide.nix
    # ./tmux/tmux.nix
    ];
 
@@ -33,22 +33,22 @@ in
 
   home.file = lib.mkMerge [
     {
-      ".functions".source = lib.mkForce ./dotfiles/.functions;
-      "cheats".source = lib.mkForce ./cheats;
-      ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
-      ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
+      #".functions".source = lib.mkForce ./dotfiles/.functions;
+      #"cheats".source = lib.mkForce ./cheats;
+      # ".config/nvim".source = lib.mkForce ./nvim; # source https://github.com/josean-dev/dev-environment-files
+      # ".config/zellij".source = lib.mkForce ./zellij; # source https://github.com/josean-dev/dev-environment-files
       # ".config/navi/config.yaml".source = lib.mkForce ./navi/config.yaml;
       # ".config/tmux/tmux.conf".source = lib.mkForce ./tmux/tmux.conf;
       # ".skhdrc".source = lib.mkForce ./skhd/skhdrc;
-      ".k8s_color".source = lib.mkForce ./k8s_color;
-      ".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
+      #".k8s_color".source = lib.mkForce ./k8s_color;
+      #".wezterm.lua".source = lib.mkForce ./wezterm/wezterm.lua;
       ".config/fish/completions".source = lib.mkForce ./fish/completions;
       ".config/fish/functions".source = lib.mkForce ./fish/functions;
       ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
     }
     (lib.mkIf isDarwin {
       # ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
-      ".config/kitty/kitty.conf".source = lib.mkForce ./kitty/kitty.conf;
+      #".config/kitty/kitty.conf".source = lib.mkForce ./kitty/kitty.conf;
       # ".config/yabai/yabairc".source = lib.mkForce ./yabai/yabairc;
       # ".config/aerospace/aerospace.toml".source = lib.mkForce ./aerospace/aerospace.toml;
 
@@ -59,13 +59,21 @@ in
   home.packages = with pkgs; ([
     # Common packages
     fish
+    zsh
+    eza
+    fzf
+    starship
+    direnv
+    zoxide
     tmux
     wget
     btop
+    bat
     htop
     zellij
     kubectl
     yamllint
+    lazygit
     chezmoi
     # kubernetes-helm
     kubectx
