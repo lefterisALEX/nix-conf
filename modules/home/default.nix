@@ -84,6 +84,7 @@ in
     go
     yazi
     age
+    fnm
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
