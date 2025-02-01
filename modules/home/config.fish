@@ -56,6 +56,9 @@ function cws_cert_info
  echo | openssl s_client -connect $argv:443 2>/dev/null | openssl x509 -noout -subject -enddate -issuer
 end
 
+function tmux-clean
+  tmux list-sessions | awk '!/^(ide|work):/ {print $1}' | sed 's/:$//' | xargs -I{} tmux kill-session -t {}
+end
 
 function bytes_to_mb_gb
     set bytes_size $argv[1]
@@ -71,4 +74,8 @@ function bytes_to_mb_gb
 
         echo "$bytes_size bytes is equal to $gb_size GB"
         echo "$bytes_size bytes is equal to $mb_size MB"
+end
+
+function aws.ec2.list
+   nu -c "aws ec2 describe-instances --query 'Reservations[].Instances[].{ID: InstanceId, IP: NetworkInterfaces[0].PrivateIpAddress, Type: InstanceType, State: State.Name, Name: Tags[?Key==`Name`]|[0].Value}' --output json | from json |select ID Name Type State IP | sort-by Name"
 end

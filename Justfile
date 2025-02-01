@@ -13,4 +13,4 @@ home-manager-linux:
 
 # Command to switch Home Manager configuration for MAC
 home-manager-mac:
-    home-manager switch --flake .#lefteris --extra-experimental-features 'nix-command flakes' --impure
+    zsh -i -c 'home-manager switch --flake .#lefteris --extra-experimental-features "nix-command flakes" --impure'
