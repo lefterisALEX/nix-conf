@@ -78,6 +78,7 @@ in
       v = "nvim";
       vim = "nvim";
       cat = "bat -pP";
+      ll  = "eza -la";
       zx = "zellij kill-all-sessions && zellij delete-all-sessions";
       ks = "kubectl --namespace=kube-system";
       ksys = "kubie ns kube-system";

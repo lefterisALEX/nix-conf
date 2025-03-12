@@ -77,5 +77,5 @@ function bytes_to_mb_gb
 end
 
 function aws.ec2.list
-   nu -c "aws ec2 describe-instances --query 'Reservations[].Instances[].{ID: InstanceId, IP: NetworkInterfaces[0].PrivateIpAddress, Type: InstanceType, State: State.Name, Name: Tags[?Key==`Name`]|[0].Value}' --output json | from json |select ID Name Type State IP | sort-by Name"
+   nu -c "aws ec2 describe-instances --query 'Reservations[].Instances[].{ID: InstanceId, IP: NetworkInterfaces[0].PrivateIpAddress, Type: InstanceType, State: State.Name, Name: Tags[?Key==`Name`]|[0].Value, LaunchTime: LaunchTime }' --output json | from json |select ID Name Type State IP LaunchTime| sort-by Name"
 end

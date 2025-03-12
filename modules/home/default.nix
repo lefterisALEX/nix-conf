@@ -41,8 +41,8 @@ in
     fzf
     starship
     direnv
-    tmux
     wget
+    tmux
     btop
     bat
     htop
