@@ -85,6 +85,7 @@ in
     yazi
     age
     fnm
+    hclfmt
   ] ++ lib.optionals isLinux [
     # GNU/Linux packages
   ]
