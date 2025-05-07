@@ -3,3 +3,4 @@ result-*
 hardware-configuration.nix
 age.key
 #modules/home/work.fish
+.DS_Store

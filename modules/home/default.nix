@@ -6,7 +6,7 @@ let
 in
 {
   imports = [
-   ./fish.nix
+   # ./fish.nix
    ./zoxide.nix
    ];
 
@@ -22,9 +22,9 @@ in
 
   home.file = lib.mkMerge [
     {
-      ".config/fish/completions".source = lib.mkForce ./fish/completions;
-      ".config/fish/functions".source = lib.mkForce ./fish/functions;
-      ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
+      # ".config/fish/completions".source = lib.mkForce ./fish/completions;
+      # ".config/fish/functions".source = lib.mkForce ./fish/functions;
+      # ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
     }
     (lib.mkIf isDarwin {
       # ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
