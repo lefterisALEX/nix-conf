@@ -35,6 +35,7 @@ in
 
   home.packages = with pkgs; ([
     # Common packages
+    just
     fish
     zoxide
     zsh
@@ -103,7 +104,7 @@ in
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
     # Direnv integration for flakes
-    direnv.enable = true;
-    direnv.nix-direnv.enable = true;
+    # direnv.enable = true;
+    # direnv.nix-direnv.enable = true;
   };
 }
