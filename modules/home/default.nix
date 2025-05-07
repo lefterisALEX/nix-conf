@@ -7,7 +7,7 @@ in
 {
   imports = [
    # ./fish.nix
-   ./zoxide.nix
+   # ./zoxide.nix
    ];
 
   home.username = "lefteris";
@@ -36,6 +36,7 @@ in
   home.packages = with pkgs; ([
     # Common packages
     fish
+    zoxide
     zsh
     eza
     fzf
