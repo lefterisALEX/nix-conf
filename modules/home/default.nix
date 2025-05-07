@@ -7,7 +7,6 @@ in
 {
   imports = [
    # ./fish.nix
-   # ./zoxide.nix
    ];
 
   home.username = "lefteris";
@@ -16,19 +15,12 @@ in
     if isDarwin then "/Users/lefteris" else unsupported;
 
   home.stateVersion = "23.11"; # Don't change this. This will not upgrade your home-manager.
-#  programs.home-manager =  {
-#     enable = true;
-#  };
 
   home.file = lib.mkMerge [
     {
-      # ".config/fish/completions".source = lib.mkForce ./fish/completions;
-      # ".config/fish/functions".source = lib.mkForce ./fish/functions;
       # ".config/fish/conf.d".source = lib.mkForce ./fish/conf.d;
     }
     (lib.mkIf isDarwin {
-      # ".config/karabiner/karabiner.json".source = lib.mkForce ./karabiner/karabiner.json;
-
     })
   ];
 
@@ -103,8 +95,5 @@ in
   programs = {
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
-    # Direnv integration for flakes
-    # direnv.enable = true;
-    # direnv.nix-direnv.enable = true;
   };
 }
