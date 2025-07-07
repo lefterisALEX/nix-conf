@@ -40,7 +40,6 @@ in
     btop
     bat
     htop
-    zellij
     kubectl
     yamllint
     lazygit
@@ -69,7 +68,6 @@ in
     unixtools.watch
     viddy
     devbox
-    helix
     hcloud
     direnv
     nushell
