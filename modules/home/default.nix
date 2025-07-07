@@ -61,7 +61,7 @@ in
     jless
     gh
     terraform-ls
-    neovim
+    # neovim
     python3
     crane
     stern
